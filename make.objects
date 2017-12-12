@@ -1,0 +1,40 @@
+ENGINE=\
+engine.o \
+engine/input.o \
+engine/meshmanager.o \
+engine/shadermanager.o \
+engine/texturemanager.o
+
+OBJECT=\
+engine/object/camera.o \
+engine/object/object.o \
+
+GUI=\
+engine/gui/element.o \
+engine/gui/gui.o \
+engine/gui/window.o
+
+UTIL=\
+engine/util/colour.o \
+engine/util/matrix.o \
+engine/util/perlin.o \
+engine/util/random.o \
+engine/util/shader.o \
+engine/util/util.o
+
+VISAGE=\
+engine/visage/mesh.o \
+engine/visage/particle.o \
+engine/visage/skybox.o
+
+TYPE_T=\
+tests/types/angle.t.out \
+tests/types/colour.t.out \
+tests/types/weightedlist.t.out \
+#tests/types/vec2d.t.out \
+
+UTIL_T=\
+tests/util/util.t.out \
+tests/util/interval.t.out
+# \
+#tests/util/random.t.out
