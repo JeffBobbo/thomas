@@ -20,9 +20,12 @@ all: $(ENGINE) $(OBJECT) $(GUI) $(UTIL) $(VISAGE)
 %.o : %.cpp
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $< -o $@
 
+docs:
+	doxygen doxygen.config
+
 clean:
 	$(warning Cleaning...)
 	@$(RM) $(ENGINE) $(OBJECT) $(GUI) $(UTIL) $(VISAGE) libengine.a
 
-.PHONY: debug release all clean
+.PHONY: debug release all docs clean
 
