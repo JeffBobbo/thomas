@@ -14,6 +14,7 @@ namespace engine
 {
   void init(const int w, const int h, EventReceiver* const recv);
   void close();
+  bool run();
   void beginFrame();
   void endFrame();
 }

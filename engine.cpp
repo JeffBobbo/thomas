@@ -4,8 +4,8 @@
 #include "engine/internal.h"
 #include "engine/util/util.h"
 
-int screenWidth = 640;
-int screenHeight = 480;
+int screenWidth;
+int screenHeight;
 GLFWwindow* window = nullptr;
 EventReceiver* receiver = nullptr;
 
@@ -46,12 +46,20 @@ void engine::init(const int w, const int h, EventReceiver* const recv)
 
   glEnable(GL_DEPTH_TEST);
   glEnable(GL_TEXTURE_2D);
+  glEnable(GL_CULL_FACE);
   glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+  glfwWindowHint(GLFW_SAMPLES, 4);
+  glEnable(GL_MULTISAMPLE);
 }
 
 void engine::close()
 {
   glfwTerminate();
+}
+
+bool engine::run()
+{
+  return !glfwWindowShouldClose(window);
 }
 
 void engine::beginFrame()
