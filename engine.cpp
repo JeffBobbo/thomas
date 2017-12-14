@@ -18,7 +18,7 @@ void resize(GLFWwindow* window, int width, int height)
   glViewport(0, 0, width, height); // Reset The Current Viewport
 }
 
-void init(const int w, const int h, EventReceiver* const recv)
+void engine::init(const int w, const int h, EventReceiver* const recv)
 {
   glfwInit();
 
@@ -49,22 +49,18 @@ void init(const int w, const int h, EventReceiver* const recv)
   glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 }
 
-void close()
+void engine::close()
 {
   glfwTerminate();
 }
 
-void beginFrame()
+void engine::beginFrame()
 {
   updateTicks();
   glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 }
 
-void renderScene()
-{
-}
-
-void endFrame()
+void engine::endFrame()
 {
   glfwSwapBuffers(window);
   glfwPollEvents();

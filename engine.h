@@ -10,14 +10,13 @@ extern int screenWidth;
 extern int screenHeight;
 extern GLFWwindow* window;
 
-//namespace engine
-//{
+namespace engine
+{
   void init(const int w, const int h, EventReceiver* const recv);
   void close();
   void beginFrame();
-  void renderScene();
   void endFrame();
-//}
+}
 
 
 #endif

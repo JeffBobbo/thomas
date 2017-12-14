@@ -16,12 +16,9 @@ public:
     PARTICLE,
     MESH,
     SKYBOX
-    //POLYGON = 0,
-    //TEXTURE,
-    //TEXT
   };
 
-  Visage() : blend(false), cull(true) {}//: object(nullptr) {}
+  Visage() : blend(false), cull(true) {}
   virtual ~Visage()
   {
     for (Animatrix* a : animatrices)
