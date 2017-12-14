@@ -59,7 +59,7 @@ void VisageSkybox::load(const std::string& name)
   std::string suffixes[] = {"ft", "bk", "lf", "rt", "up", "dn"};
   for (int i = 0; i < 6; ++i)
   {
-    textures[i] = TextureManager::getTexture(std::string("img/skybox/" + name + "_" + suffixes[i] + ".png"));
+    textures[i] = TextureManager::getTexture(std::string(name + "_" + suffixes[i] + ".png"));
   }
 
   // TODO: This mesh is broken, some faces have incorrect windings
