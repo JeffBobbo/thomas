@@ -2,7 +2,7 @@ ENGINE=\
 engine.o \
 engine/input.o \
 engine/meshmanager.o \
-engine/shadermanager.o \
+engine/shader.o \
 engine/texturemanager.o
 
 OBJECT=\
@@ -19,7 +19,6 @@ engine/util/colour.o \
 engine/util/matrix.o \
 engine/util/perlin.o \
 engine/util/random.o \
-engine/util/shader.o \
 engine/util/util.o
 
 VISAGE=\

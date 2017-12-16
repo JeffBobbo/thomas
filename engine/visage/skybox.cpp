@@ -5,9 +5,8 @@
 #include <glm/gtc/type_ptr.hpp>
 
 #include "../object/camera.h"
-#include "../util/shader.h"
 #include "../meshmanager.h"
-#include "../shadermanager.h"
+#include "../shader.h"
 #include "../texturemanager.h"
 
 VisageSkybox::~VisageSkybox()
@@ -36,10 +35,10 @@ void VisageSkybox::draw()
   glActiveTexture(GL_TEXTURE0);
 
   glm::mat4 model = glm::translate(glm::mat4(1.0f), camera.getPosition());
-  const Shader* shader = ShaderManager::getShader("skybox");
-  shader->activate();
-  shader->update();
-  GLint uniModel = glGetUniformLocation(shader->handle(), "model");
+  const engine::Program* program = engine::ProgramManager::get("skybox");
+  program->activate();
+  program->update();
+  GLint uniModel = glGetUniformLocation(program->handle(), "model");
   glUniformMatrix4fv(uniModel, 1, GL_FALSE, glm::value_ptr(model));
   for (int i = 0; i < 6; ++i)
   {

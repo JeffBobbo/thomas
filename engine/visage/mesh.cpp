@@ -1,7 +1,7 @@
 #include "mesh.h"
 
 #include "../texturemanager.h"
-#include "../util/shader.h"
+#include "../shader.h"
 
 void VisageMesh::draw()
 {
@@ -9,13 +9,13 @@ void VisageMesh::draw()
 
   GLint uni = 0;
   glActiveTexture(GL_TEXTURE0);
-  if (diffuse && (uni = glGetUniformLocation(Shader::getActive()->handle(), "diffuse")) >= 0)
+  if (diffuse && (uni = glGetUniformLocation(engine::Program::active()->handle(), "diffuse")) >= 0)
   {
     glBindTexture(GL_TEXTURE_2D, diffuse);
     glUniform1i(uni, 0);
   }
   glActiveTexture(GL_TEXTURE1);
-  if (specular && (uni = glGetUniformLocation(Shader::getActive()->handle(), "specular")) >= 0)
+  if (specular && (uni = glGetUniformLocation(engine::Program::active()->handle(), "specular")) >= 0)
   {
     glBindTexture(GL_TEXTURE_2D, specular);
     glUniform1i(uni, 1);
@@ -25,7 +25,7 @@ void VisageMesh::draw()
     glBindTexture(GL_TEXTURE_2D, 0);
   }
   glActiveTexture(GL_TEXTURE2);
-  if (emission && (uni = glGetUniformLocation(Shader::getActive()->handle(), "emission")) >= 0)
+  if (emission && (uni = glGetUniformLocation(engine::Program::active()->handle(), "emission")) >= 0)
   {
     glBindTexture(GL_TEXTURE_2D, emission);
     glUniform1i(uni, 2);

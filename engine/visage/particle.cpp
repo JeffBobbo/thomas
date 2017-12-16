@@ -5,11 +5,10 @@
 #include <glm/gtx/random.hpp>
 
 #include "../../engine.h"
-#include "../shadermanager.h"
+#include "../shader.h"
 #include "../texturemanager.h"
 #include "../object/camera.h"
 #include "../util/random.h"
-#include "../util/shader.h"
 #include "../util/util.h"
 
 ParticleSystem::ParticleSystem()
@@ -66,11 +65,11 @@ void ParticleSystem::add(int n)
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, quad_ebo);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(elements), elements, GL_STATIC_DRAW);
 
-    const Shader* shader = ShaderManager::getShader("particle");
-    GLint posAttrib = glGetAttribLocation(shader->handle(), "in_vertex");
+    const engine::Program* program = engine::ProgramManager::get("particle");
+    GLint posAttrib = glGetAttribLocation(program->handle(), "in_vertex");
     glEnableVertexAttribArray(posAttrib);
     glVertexAttribPointer(posAttrib, 3, GL_FLOAT, GL_FALSE, 5*sizeof(float), 0);
-    GLint texAttrib = glGetAttribLocation(shader->handle(), "in_uv");
+    GLint texAttrib = glGetAttribLocation(program->handle(), "in_uv");
     glEnableVertexAttribArray(texAttrib);
     glVertexAttribPointer(texAttrib, 2, GL_FLOAT, GL_FALSE, 5*sizeof(float), (void*)(3*sizeof(float)));
   }
@@ -142,14 +141,14 @@ void ParticleSystem::draw()
 
   glBindVertexArray(quad_vao);
 
-  const Shader* shader = ShaderManager::getShader("particle");
-  shader->activate();
-  shader->update();
+  const engine::Program* program = engine::ProgramManager::get("particle");
+  program->activate();
+  program->update();
   glActiveTexture(GL_TEXTURE0);
-  glUniform1i(glGetUniformLocation(shader->handle(), "diffuse"), 0);
+  glUniform1i(glGetUniformLocation(program->handle(), "diffuse"), 0);
   glBindTexture(GL_TEXTURE_2D, texture);
-  GLint uniModel = glGetUniformLocation(shader->handle(), "model");
-  GLint uniColor = glGetUniformLocation(shader->handle(), "colourMult");
+  GLint uniModel = glGetUniformLocation(program->handle(), "model");
+  GLint uniColor = glGetUniformLocation(program->handle(), "colourMult");
   for (Particle* p = particles; p != last; ++p)
   {
     glm::mat4 model = glm::translate(glm::mat4(1.0f), p->pos);
@@ -166,7 +165,7 @@ void ParticleSystem::draw()
     model[2][0] = 0.0f;
     model[2][1] = 0.0f;
     model[2][1] = 1.0f;
-    GLint uniView = glGetUniformLocation(Shader::getActive()->handle(), "view");
+    GLint uniView = glGetUniformLocation(Program::getActive()->handle(), "view");
     glUniformMatrix4fv(uniView, 1, GL_FALSE, glm::value_ptr(glm::mat4(1.0f)));
     */
     glUniformMatrix4fv(uniModel, 1, GL_FALSE, glm::value_ptr(model));

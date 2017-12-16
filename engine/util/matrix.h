@@ -10,7 +10,7 @@
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
-#include "shader.h"
+#include "../shader.h"
 
 const size_t STACK_SIZE = 8;
 
@@ -73,7 +73,7 @@ public:
 
   static inline void apply()
   {
-    GLint uniform = glGetUniformLocation(Shader::getActive()->handle(), "model");
+    GLint uniform = glGetUniformLocation(engine::Program::active()->handle(), "model");
     glUniformMatrix4fv(uniform, 1, GL_FALSE, glm::value_ptr(matrix.stack[matrix.level]));
   }
 

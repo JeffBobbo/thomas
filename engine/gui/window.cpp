@@ -6,8 +6,7 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
-#include "../util/shader.h"
-#include "../shadermanager.h"
+#include "../shader.h"
 
 namespace gui
 {
@@ -56,18 +55,18 @@ namespace gui
       glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ebo);
       glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(elements), elements, GL_STATIC_DRAW);
 
-      const Shader* shader = ShaderManager::getShader("gui");
-      GLint posAttrib = glGetAttribLocation(shader->handle(), "in_vertex");
+      const engine::Program* program = engine::ProgramManager::get("gui");
+      GLint posAttrib = glGetAttribLocation(program->handle(), "in_vertex");
       glEnableVertexAttribArray(posAttrib);
       glVertexAttribPointer(posAttrib, 3, GL_FLOAT, GL_FALSE, 5*sizeof(float), 0);
 
-      GLint uvAttrib = glGetAttribLocation(shader->handle(), "in_uv");
+      GLint uvAttrib = glGetAttribLocation(program->handle(), "in_uv");
       glEnableVertexAttribArray(uvAttrib);
       glVertexAttribPointer(uvAttrib, 2, GL_FLOAT, GL_FALSE, 5*sizeof(float), (void*)(3*sizeof(float)));
     }
 
     glBindVertexArray(vao);
-    const Shader* shader = Shader::getActive();
+    const engine::Program* program = engine::Program::active();
 
     glm::mat4 model = glm::mat4(1.0f);
     glm::ivec2 pos, size;
@@ -75,18 +74,18 @@ namespace gui
     model = glm::translate(model, glm::vec3(pos, 0.0f));
     // model = glm::rotate(model, ?);
     model = glm::scale(model, glm::vec3(size, 0.0f));
-    GLint uniModel = glGetUniformLocation(shader->handle(), "model");
+    GLint uniModel = glGetUniformLocation(program->handle(), "model");
     glUniformMatrix4fv(uniModel, 1, GL_FALSE, glm::value_ptr(model));
 
     if (texture >= 0)
     {
-      GLint uniDiffuse = glGetUniformLocation(shader->handle(), "diffuse");
+      GLint uniDiffuse = glGetUniformLocation(program->handle(), "diffuse");
       glUniform1i(uniDiffuse, 0);
       glBindTexture(GL_TEXTURE_2D, texture);
     }
-    glUniform1i(glGetUniformLocation(shader->handle(), "hasTexture"), texture >= 0);
+    glUniform1i(glGetUniformLocation(program->handle(), "hasTexture"), texture >= 0);
 
-    GLint uniColour = glGetUniformLocation(shader->handle(), "colour");
+    GLint uniColour = glGetUniformLocation(program->handle(), "colour");
     glUniform4fv(uniColour, 1, glm::value_ptr(colour));
 
     glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);

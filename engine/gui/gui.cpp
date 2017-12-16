@@ -8,9 +8,8 @@
 #include "../internal.h"
 #include "../event.h"
 #include "../receiver.h"
-#include "../shadermanager.h"
+#include "../shader.h"
 #include "../texturemanager.h"
-#include "../util/shader.h"
 #include "../../engine.h"
 
 gui::Window* node = nullptr;
@@ -83,15 +82,15 @@ void gui::draw()
 {
   if (!node)
     return;
-  const Shader* shader = ShaderManager::getShader("gui");
-  shader->activate();
+  const engine::Program* program = engine::ProgramManager::get("gui");
+  program->activate();
 
   glm::mat4 view = glm::mat4(1.0f);
-  GLint uniView = glGetUniformLocation(shader->handle(), "view");
+  GLint uniView = glGetUniformLocation(program->handle(), "view");
   glUniformMatrix4fv(uniView, 1, GL_FALSE, glm::value_ptr(view));
 
   glm::mat4 proj = glm::ortho(0.0f, static_cast<float>(screenWidth), static_cast<float>(screenHeight), 0.0f, 0.0f, 100.0f);
-  GLint uniProj = glGetUniformLocation(shader->handle(), "proj");
+  GLint uniProj = glGetUniformLocation(program->handle(), "proj");
   glUniformMatrix4fv(uniProj, 1, GL_FALSE, glm::value_ptr(proj));
 
   glDisable(GL_CULL_FACE);
