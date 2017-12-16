@@ -103,7 +103,12 @@ public:
     ProgramManager& pm = instance();
     auto it = pm.programs.find(name);
     if (it == std::end(pm.programs))
-      it == pm.programs.insert(std::make_pair(name, new Program())).first;
+    {
+      Program* p = new Program();
+      auto r = pm.programs.insert(std::make_pair(name, p));
+      //assert(r.second);
+      return r.first->second;
+    }
     return it->second;
   }
 
