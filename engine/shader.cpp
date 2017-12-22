@@ -83,14 +83,14 @@ void Program::update() const
   if (this != const_cast<const Program* >(current))
     activate();
   GLint uniView = glGetUniformLocation(handle(), "view");
-  glUniformMatrix4fv(uniView, 1, GL_FALSE, glm::value_ptr(camera.getView()));
+  glUniformMatrix4fv(uniView, 1, GL_FALSE, glm::value_ptr(camera->getView()));
 
   GLint uniProj = glGetUniformLocation(handle(), "proj");
-  glUniformMatrix4fv(uniProj, 1, GL_FALSE, glm::value_ptr(camera.getProjection(static_cast<float>(screenWidth), static_cast<float>(screenHeight))));
+  glUniformMatrix4fv(uniProj, 1, GL_FALSE, glm::value_ptr(camera->getProjection(static_cast<float>(screenWidth), static_cast<float>(screenHeight))));
 
   GLint uniCam = glGetUniformLocation(handle(), "camera");
   if (uniCam >= 0)
-    glUniform3fv(uniCam, 1, glm::value_ptr(camera.getPosition()));
+    glUniform3fv(uniCam, 1, glm::value_ptr(camera->getPosition()));
 
   GLint uniGamma = glGetUniformLocation(handle(), "gamma");
   if (uniGamma >= 0)

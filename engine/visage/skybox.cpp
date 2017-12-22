@@ -34,7 +34,7 @@ void VisageSkybox::draw()
   glBindVertexArray(skybox_vao);
   glActiveTexture(GL_TEXTURE0);
 
-  glm::mat4 model = glm::translate(glm::mat4(1.0f), camera.getPosition());
+  glm::mat4 model = glm::translate(glm::mat4(1.0f), camera->getPosition());
   const engine::Program* program = engine::ProgramManager::get("skybox");
   program->activate();
   program->update();

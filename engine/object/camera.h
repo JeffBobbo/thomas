@@ -17,7 +17,6 @@ public:
   , sourceObject(nullptr), sourcePosition(0.0f)
   , upVector(0.0f, 1.0f, 0.0f)
   , fov(90.0_d)
-  , shakiness(0.0f), shakeFrom(0.0f), shakeTo(0.0f), shakeStart(0), shakeTime(0)
   {
   }
   virtual ~Camera() {}
@@ -53,8 +52,6 @@ public:
     return glm::perspective(static_cast<float>(fov.radians()), width/height, 0.1f, 1000000.0f);
   }
 
-  glm::vec3 getShake();
-
   inline glm::vec3 lookingFrom()
   {
     return sourceObject ? sourceObject->getPosition() : sourcePosition;
@@ -71,14 +68,6 @@ public:
   }
 
 private:
-  inline millis_t shakeDuration(const float sf)
-  {
-    return static_cast<millis_t>(500.0f - (sf * 250.0f));
-  }
-public:
-  void setShakiness(const float sf);
-
-private:
   const Object* targetObject;
   glm::vec3 targetPosition;
 
@@ -88,14 +77,8 @@ private:
   glm::vec3 upVector;
 
   angle_t fov;
-
-  float shakiness;
-  glm::vec3 shakeFrom;
-  glm::vec3 shakeTo;
-  millis_t shakeStart;
-  millis_t shakeTime;
 };
 
-extern Camera camera;
+extern Camera* camera;
 
 #endif
