@@ -14,7 +14,7 @@ public:
   };
 
   Object()
-   : position(0.0f), velocity(0.0f), rotation(0.0f)
+   : position(0.0f), velocity(0.0f), orientation()
    , size(1.0f)
    , visage(nullptr)
    , born(elapsed()) {};
@@ -37,12 +37,12 @@ public:
 
   inline const glm::vec3& getPosition() const { return position; }
   inline const glm::vec3& getVelocity() const { return velocity; }
-  inline const glm::vec3& getRotation() const { return rotation; }
+  inline const glm::quat& getOrientation() const { return orientation; }
 
 public:
   glm::vec3 position;
   glm::vec3 velocity;
-  glm::vec3 rotation;
+  glm::quat orientation;
   float size; // uniform scaling of the object
   Visage* visage;
 protected:
