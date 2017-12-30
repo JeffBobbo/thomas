@@ -1,5 +1,11 @@
 var annotated =
 [
+    [ "engine", null, [
+      [ "Shader", "classengine_1_1Shader.html", "classengine_1_1Shader" ],
+      [ "ShaderManager", "classengine_1_1ShaderManager.html", "classengine_1_1ShaderManager" ],
+      [ "Program", "classengine_1_1Program.html", "classengine_1_1Program" ],
+      [ "ProgramManager", "classengine_1_1ProgramManager.html", "classengine_1_1ProgramManager" ]
+    ] ],
     [ "gui", null, [
       [ "Element", "classgui_1_1Element.html", "classgui_1_1Element" ],
       [ "Window", "classgui_1_1Window.html", "classgui_1_1Window" ]
@@ -32,8 +38,6 @@ var annotated =
     [ "Particle", "structParticle.html", "structParticle" ],
     [ "ParticleSystem", "classParticleSystem.html", "classParticleSystem" ],
     [ "Perlin", "classPerlin.html", "classPerlin" ],
-    [ "Shader", "classShader.html", "classShader" ],
-    [ "ShaderManager", "classShaderManager.html", "classShaderManager" ],
     [ "Texture", "classTexture.html", "classTexture" ],
     [ "TextureManager", "classTextureManager.html", "classTextureManager" ],
     [ "VertexTriplet", "structVertexTriplet.html", "structVertexTriplet" ],

@@ -10,6 +10,6 @@ var dir_996f45160da62e1a3d7f6046fad68f51 =
     [ "meshmanager.h", "meshmanager_8h_source.html", null ],
     [ "octree.h", "octree_8h_source.html", null ],
     [ "receiver.h", "receiver_8h_source.html", null ],
-    [ "shadermanager.h", "shadermanager_8h_source.html", null ],
+    [ "shader.h", "shader_8h_source.html", null ],
     [ "texturemanager.h", "texturemanager_8h_source.html", null ]
 ];
