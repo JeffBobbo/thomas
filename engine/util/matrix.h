@@ -1,8 +1,6 @@
 #ifndef MATRIX_H_INCLUDE
 #define MATRIX_H_INCLUDE
 
-#include <string>
-
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
@@ -71,6 +69,11 @@ public:
     matrix.stack[matrix.level] = glm::scale(matrix.stack[matrix.level], by);
   }
 
+  static inline void scale(const float& by)
+  {
+    matrix.stack[matrix.level] = glm::scale(matrix.stack[matrix.level], glm::vec3(by));
+  }
+
   static inline void apply()
   {
     GLint uniform = glGetUniformLocation(engine::Program::active()->handle(), "model");
@@ -80,7 +83,6 @@ public:
   static void print();
 
 private:
-  //std::stack<glm::mat4> stack;
   glm::mat4* stack;
   size_t level;
   size_t capacity;
