@@ -16,12 +16,12 @@ public:
   : targetObject(nullptr), targetPosition(0.0f)
   , sourceObject(nullptr), sourcePosition(0.0f)
   , upVector(0.0f, 1.0f, 0.0f)
-  , fov(90.0_d)
+  , fov(static_cast<float>(pi())/2.0f)
   {
   }
   virtual ~Camera() {}
 
-  inline void setFOV(const angle_t f)
+  inline void setFOV(const float f)
   {
     fov = f;
   }
@@ -49,7 +49,7 @@ public:
   }
   inline glm::mat4 getProjection(const float width, const float height) const
   {
-    return glm::perspective(static_cast<float>(fov.radians()), width/height, 0.1f, 1000000.0f);
+    return glm::perspective(fov, width/height, 0.1f, 1000000.0f);
   }
 
   inline glm::vec3 lookingFrom()
@@ -76,7 +76,7 @@ private:
 
   glm::vec3 upVector;
 
-  angle_t fov;
+  float fov;
 };
 
 extern Camera* camera;
