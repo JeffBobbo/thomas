@@ -17,6 +17,8 @@ namespace engine
   bool run();
   void beginFrame();
   void endFrame();
+  void clear();
+  void display();
 }
 
 

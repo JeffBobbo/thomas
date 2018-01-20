@@ -65,11 +65,19 @@ bool engine::run()
 void engine::beginFrame()
 {
   updateTicks();
-  glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 }
 
 void engine::endFrame()
 {
-  glfwSwapBuffers(window);
   glfwPollEvents();
+}
+
+void engine::clear()
+{
+  glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+}
+
+void engine::display()
+{
+  glfwSwapBuffers(window);
 }
