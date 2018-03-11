@@ -66,6 +66,7 @@ public:
     wchar_t character;
     int keycode;
     bool pressed : 1;
+    bool repeat : 1;
     bool shift : 1;
     bool control : 1;
     bool alt : 1;

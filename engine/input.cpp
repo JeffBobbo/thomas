@@ -157,7 +157,8 @@ void kb_action(GLFWwindow* window, int key, int scancode, int action, int mod)
   Event e(Event::Type::KEYBOARD);
   e.keyboard.character = key;
   e.keyboard.keycode = scancode;
-  e.keyboard.pressed = action == GLFW_PRESS || action == GLFW_REPEAT;
+  e.keyboard.pressed = action == GLFW_PRESS;
+  e.keyboard.repeat = action == GLFW_REPEAT;
   e.keyboard.shift = mod & GLFW_MOD_SHIFT;
   e.keyboard.control = mod & GLFW_MOD_CONTROL;
   e.keyboard.alt = mod & GLFW_MOD_ALT;
