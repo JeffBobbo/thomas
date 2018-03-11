@@ -98,17 +98,22 @@ public:
       delete it.second;
   }
 
+  static const Program* create(const std::string& name)
+  {
+    ProgramManager& pm = instance();
+    auto it = pm.programs.find(name);
+    if (it != std::end(pm.programs))
+      throw std::string("Program already exists");
+    Program* p = new Program();
+    auto r = pm.programs.insert(std::make_pair(name, p));
+    return r.first->second;
+  }
   static const Program* get(const std::string& name)
   {
     ProgramManager& pm = instance();
     auto it = pm.programs.find(name);
     if (it == std::end(pm.programs))
-    {
-      Program* p = new Program();
-      auto r = pm.programs.insert(std::make_pair(name, p));
-      //assert(r.second);
-      return r.first->second;
-    }
+      return nullptr;
     return it->second;
   }
 
