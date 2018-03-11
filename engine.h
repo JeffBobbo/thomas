@@ -4,7 +4,11 @@
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
+//#define GLT_MANUAL_VIEWPORT
+//#include "external/gltext.h"
+
 #include "engine/event.h"
+
 
 extern int screenWidth;
 extern int screenHeight;

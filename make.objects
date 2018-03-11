@@ -12,6 +12,7 @@ engine/object/object.o \
 GUI=\
 engine/gui/element.o \
 engine/gui/gui.o \
+engine/gui/label.o \
 engine/gui/window.o
 
 UTIL=\

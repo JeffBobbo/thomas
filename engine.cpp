@@ -15,7 +15,8 @@ void resize(GLFWwindow* window, int width, int height)
   screenWidth = width;
   screenHeight = height;
 
-  glViewport(0, 0, width, height); // Reset The Current Viewport
+  glViewport(0, 0, width, height); // reset OpenGL's viewport
+  //gltViewport(width, height); // reset gltext's viewport
 }
 
 void engine::init(const int w, const int h, EventReceiver* const recv)
@@ -44,6 +45,8 @@ void engine::init(const int w, const int h, EventReceiver* const recv)
   receiver = recv;
   initTicks();
 
+  //gltInit();
+
   glEnable(GL_DEPTH_TEST);
   glEnable(GL_TEXTURE_2D);
   glEnable(GL_CULL_FACE);
@@ -54,6 +57,7 @@ void engine::init(const int w, const int h, EventReceiver* const recv)
 
 void engine::close()
 {
+  //gltTerminate();
   glfwTerminate();
 }
 

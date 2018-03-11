@@ -12,6 +12,8 @@
 #include "../texturemanager.h"
 #include "../../engine.h"
 
+#include "label.h"
+
 gui::Window* node = nullptr;
 gui::Element* focus = nullptr;
 
@@ -56,6 +58,7 @@ class HWindow : public gui::Window
 
 void gui::init()
 {
+  gui::Label::init();
   node = new gui::Window();
   node->position = glm::ivec4(0, 0, 0, 0);
   node->relative = glm::vec4(0.0f, 0.0f, 1.0f, 1.0f);
@@ -108,11 +111,14 @@ void gui::draw()
 void gui::close()
 {
   delete node;
+  gui::Label::terminate();
 }
 
 void gui::onEvent(const Event& e)
 {
   bool r = focus ? focus->onEvent(e) : false;
+  if (!r)
+    r = node->onEvent(e);
   if (!r)
     receiver->onEvent(e);
 }

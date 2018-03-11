@@ -19,6 +19,16 @@ namespace gui
 
     virtual void draw() const final;
 
+    virtual bool onEvent(const Event& e)
+    {
+      for (auto& it : children)
+      {
+        if (it->onEvent(e))
+          return true;
+      }
+      return false;
+    }
+
     virtual void add(Element* child) final
     {
       children.push_back(child);
@@ -31,13 +41,13 @@ namespace gui
       children.clear();
     }
 
-    std::vector<Element*>::iterator begin() { return std::begin(children); }
-    std::vector<Element*>::iterator end() { return std::end(children); }
-    const std::vector<Element*>& getChildren() const { return children; }
+    virtual std::vector<Element*>::iterator begin() final { return std::begin(children); }
+    virtual std::vector<Element*>::iterator end() final { return std::end(children); }
+    virtual const std::vector<Element*>& getChildren() const final { return children; }
 
     inline virtual void setColour(const glm::vec4& c) final { colour = c; }
     inline virtual void setImage(GLint t) final { texture = t; }
-  private:
+  protected:
     std::vector<Element*> children;
     glm::vec4 colour;
     GLint texture;

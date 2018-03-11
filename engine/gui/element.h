@@ -13,6 +13,7 @@ namespace gui
   public:
     enum class Type
     {
+      LABEL,
       WINDOW
     };
     Element();
@@ -22,17 +23,12 @@ namespace gui
 
     virtual void draw() const = 0;
 
-    glm::vec4 getPosition() const;
-
     inline void setParent(Element* e) { parent = e; }
     inline bool isVisible() const { return true; }
 
     void getRect(glm::ivec2& pos, glm::ivec2& size) const;
 
-    virtual bool onEvent(const Event& e)
-    {
-      return parent ? parent->onEvent(e) : false;
-    }
+    virtual bool onEvent(const Event&) { return false; }
 
     glm::ivec4 position;
     glm::vec4 relative;
