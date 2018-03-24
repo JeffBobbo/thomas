@@ -64,6 +64,9 @@ public:
   // dislike this, allows bad stuff to happen
   inline GLuint handle() const { return program; }
 
+  GLint uniform(const char* name) const;
+  GLint attribute(const char* name) const;
+
   inline static const Program* active() { return current; }
   inline void activate() const
   {

@@ -78,6 +78,24 @@ void Program::link() const
   assert(status == GL_TRUE);
 }
 
+GLint Program::uniform(const char* name) const
+{
+  GLint uni = glGetUniformLocation(handle(), name);
+
+  //if (uni >= 0)
+  assert(uni >= 0);
+  return uni;
+}
+
+GLint Program::attribute(const char* name) const
+{
+  GLint attrib = glGetAttribLocation(handle(), name);
+
+  //if (attrib >= 0)
+  assert(attrib >= 0);
+  return attrib;
+}
+
 void Program::update() const
 {
   if (this != const_cast<const Program* >(current))
