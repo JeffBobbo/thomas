@@ -8,6 +8,7 @@ var annotated =
     ] ],
     [ "gui", null, [
       [ "Element", "classgui_1_1Element.html", "classgui_1_1Element" ],
+      [ "Label", "classgui_1_1Label.html", "classgui_1_1Label" ],
       [ "Window", "classgui_1_1Window.html", "classgui_1_1Window" ]
     ] ],
     [ "keyboard", null, [
@@ -26,8 +27,9 @@ var annotated =
     [ "Event", "classEvent.html", "classEvent" ],
     [ "EventReceiver", "classEventReceiver.html", "classEventReceiver" ],
     [ "Face", "structFace.html", "structFace" ],
+    [ "Font", "classFont.html", "classFont" ],
+    [ "FontManager", "classFontManager.html", "classFontManager" ],
     [ "HSVA", "structHSVA.html", "structHSVA" ],
-    [ "HWindow", "classHWindow.html", null ],
     [ "interval_t", "classinterval__t.html", "classinterval__t" ],
     [ "Matrix", "classMatrix.html", "classMatrix" ],
     [ "Mesh", "classMesh.html", "classMesh" ],

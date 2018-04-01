@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>engine: Shader Class Reference</title>
+<title>engine: Font Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -84,7 +84,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('classShader.html','');});
+$(document).ready(function(){initNavTree('classFont.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -104,48 +104,35 @@ $(document).ready(function(){initNavTree('classShader.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
-<a href="classShader-members.html">List of all members</a>  </div>
+<a href="classFont-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Shader Class Reference</div>  </div>
+<div class="title">Font Class Reference<span class="mlabels"><span class="mlabel">final</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa31f105dfab2e057b6db76f0ba2d6155"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa31f105dfab2e057b6db76f0ba2d6155"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Shader</b> (const std::string &amp;name)</td></tr>
-<tr class="separator:aa31f105dfab2e057b6db76f0ba2d6155"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af41d878dcb1433f9a5b38869824794fe"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af41d878dcb1433f9a5b38869824794fe"></a>
-const GLuint &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>handle</b> () const </td></tr>
-<tr class="separator:af41d878dcb1433f9a5b38869824794fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9188600445acc434037e8b7ed347c51c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9188600445acc434037e8b7ed347c51c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>activate</b> () const </td></tr>
-<tr class="separator:a9188600445acc434037e8b7ed347c51c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad413d5381dc40c70cf346c8b08249027"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad413d5381dc40c70cf346c8b08249027"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> () const </td></tr>
-<tr class="separator:ad413d5381dc40c70cf346c8b08249027"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a7c3030f806b4db71933547ba28e6b1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9a7c3030f806b4db71933547ba28e6b1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setLighting</b> () const </td></tr>
-<tr class="separator:a9a7c3030f806b4db71933547ba28e6b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a29d428b6f0b3e6bfcd2281939d7b0b5b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a29d428b6f0b3e6bfcd2281939d7b0b5b"></a>
-static <a class="el" href="classShader.html">Shader</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getActive</b> ()</td></tr>
-<tr class="separator:a29d428b6f0b3e6bfcd2281939d7b0b5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ef746f5bbba6bcd68e7722f5d51f541"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7ef746f5bbba6bcd68e7722f5d51f541"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Font</b> (const std::string &amp;name, const float sz)</td></tr>
+<tr class="separator:a7ef746f5bbba6bcd68e7722f5d51f541"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3593d74df48214e9b498b5faf1580fb7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3593d74df48214e9b498b5faf1580fb7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>area</b> (const std::string &amp;text, float &amp;y0, float &amp;y1) const </td></tr>
+<tr class="separator:a3593d74df48214e9b498b5faf1580fb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab97ea430b3c1ab1b638fbf20e0843363"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab97ea430b3c1ab1b638fbf20e0843363"></a>
+GLuint&#160;</td><td class="memItemRight" valign="bottom"><b>getTexture</b> () const </td></tr>
+<tr class="separator:ab97ea430b3c1ab1b638fbf20e0843363"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>engine/util/<a class="el" href="shader_8h_source.html">shader.h</a></li>
-<li>engine/util/shader.cpp</li>
+<li>engine/<a class="el" href="fontmanager_8h_source.html">fontmanager.h</a></li>
+<li>engine/fontmanager.cpp</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="classShader.html">Shader</a></li>
-    <li class="footer">Generated on Wed Dec 13 2017 02:20:29 for engine by
+    <li class="navelem"><a class="el" href="classFont.html">Font</a></li>
+    <li class="footer">Generated on Sun Apr 1 2018 16:54:26 for engine by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

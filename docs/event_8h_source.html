@@ -171,24 +171,25 @@ $(document).ready(function(){initNavTree('event_8h_source.html','');});
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">wchar_t</span> character;</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">int</span> keycode;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">bool</span> pressed : 1;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">bool</span> shift : 1;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">bool</span> control : 1;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">bool</span> alt : 1;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">bool</span> super : 1;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  };</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <a class="code" href="classEvent.html">Event</a>(Type t) : type(t) {}</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keyword">const</span> Type type;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keyword">union</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  {</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    GUIEvent gui;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    MouseInput mouse;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    KeyInput keyboard;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  };</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;};</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">bool</span> repeat : 1;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">bool</span> shift : 1;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">bool</span> control : 1;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">bool</span> alt : 1;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">bool</span> super : 1;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  };</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <a class="code" href="classEvent.html">Event</a>(Type t) : type(t) {}</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keyword">const</span> Type type;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keyword">union</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    GUIEvent gui;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    MouseInput mouse;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    KeyInput keyboard;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  };</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;};</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="structEvent_1_1MouseInput_html"><div class="ttname"><a href="structEvent_1_1MouseInput.html">Event::MouseInput</a></div><div class="ttdef"><b>Definition:</b> event.h:51</div></div>
 <div class="ttc" id="structEvent_1_1KeyInput_html"><div class="ttname"><a href="structEvent_1_1KeyInput.html">Event::KeyInput</a></div><div class="ttdef"><b>Definition:</b> event.h:64</div></div>
 <div class="ttc" id="structEvent_1_1GUIEvent_html"><div class="ttname"><a href="structEvent_1_1GUIEvent.html">Event::GUIEvent</a></div><div class="ttdef"><b>Definition:</b> event.h:44</div></div>
@@ -200,7 +201,7 @@ $(document).ready(function(){initNavTree('event_8h_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_996f45160da62e1a3d7f6046fad68f51.html">engine</a></li><li class="navelem"><b>event.h</b></li>
-    <li class="footer">Generated on Sat Dec 30 2017 17:47:13 for engine by
+    <li class="footer">Generated on Sun Apr 1 2018 16:54:26 for engine by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

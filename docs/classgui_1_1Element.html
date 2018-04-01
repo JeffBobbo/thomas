@@ -118,15 +118,16 @@ Inheritance diagram for gui::Element:</div>
  <div class="center">
   <img src="classgui_1_1Element.png" usemap="#gui::Element_map" alt=""/>
   <map id="gui::Element_map" name="gui::Element_map">
-<area href="classEventReceiver.html" alt="EventReceiver" shape="rect" coords="0,0,95,24"/>
-<area href="classgui_1_1Window.html" alt="gui::Window" shape="rect" coords="0,112,95,136"/>
-<area href="classHWindow.html" alt="HWindow" shape="rect" coords="0,168,95,192"/>
+<area href="classEventReceiver.html" alt="EventReceiver" shape="rect" coords="52,0,147,24"/>
+<area href="classgui_1_1Label.html" alt="gui::Label" shape="rect" coords="0,112,95,136"/>
+<area href="classgui_1_1Window.html" alt="gui::Window" shape="rect" coords="105,112,200,136"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a1d44588cdbf972bb9a472a09313342f1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>Type</b> { <b>WINDOW</b>
+<tr class="memitem:a1d44588cdbf972bb9a472a09313342f1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>Type</b> { <b>LABEL</b>, 
+<b>WINDOW</b>
  }</td></tr>
 <tr class="separator:a1d44588cdbf972bb9a472a09313342f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -138,9 +139,6 @@ virtual Type&#160;</td><td class="memItemRight" valign="bottom"><b>type</b> () c
 <tr class="memitem:a05464315989d86de215cfdab3b48ac40"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a05464315989d86de215cfdab3b48ac40"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>draw</b> () const =0</td></tr>
 <tr class="separator:a05464315989d86de215cfdab3b48ac40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac86f47b6a04037cc4f9644a063cd0db2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac86f47b6a04037cc4f9644a063cd0db2"></a>
-glm::vec4&#160;</td><td class="memItemRight" valign="bottom"><b>getPosition</b> () const </td></tr>
-<tr class="separator:ac86f47b6a04037cc4f9644a063cd0db2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8b6d5d361e7b12d1df375bc37391eab"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af8b6d5d361e7b12d1df375bc37391eab"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setParent</b> (<a class="el" href="classgui_1_1Element.html">Element</a> *e)</td></tr>
 <tr class="separator:af8b6d5d361e7b12d1df375bc37391eab"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -150,9 +148,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>isVisible</b> () cons
 <tr class="memitem:a893ef17afa7b51b360ef25adeb9deceb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a893ef17afa7b51b360ef25adeb9deceb"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>getRect</b> (glm::ivec2 &amp;pos, glm::ivec2 &amp;size) const </td></tr>
 <tr class="separator:a893ef17afa7b51b360ef25adeb9deceb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac46001ceee6c9d5e683b3e1073a12032"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac46001ceee6c9d5e683b3e1073a12032"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>onEvent</b> (const <a class="el" href="classEvent.html">Event</a> &amp;e)</td></tr>
-<tr class="separator:ac46001ceee6c9d5e683b3e1073a12032"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cbcbc34a03d72461867a83022bed265"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6cbcbc34a03d72461867a83022bed265"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>onEvent</b> (const <a class="el" href="classEvent.html">Event</a> &amp;)</td></tr>
+<tr class="separator:a6cbcbc34a03d72461867a83022bed265"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -179,7 +177,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>gui</b></li><li class="navelem"><a class="el" href="classgui_1_1Element.html">Element</a></li>
-    <li class="footer">Generated on Sat Dec 30 2017 17:47:13 for engine by
+    <li class="footer">Generated on Sun Apr 1 2018 16:54:26 for engine by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -121,12 +121,12 @@ $(document).ready(function(){initNavTree('camera_8h_source.html','');});
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  : targetObject(<span class="keyword">nullptr</span>), targetPosition(0.0f)</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  , sourceObject(<span class="keyword">nullptr</span>), sourcePosition(0.0f)</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  , upVector(0.0f, 1.0f, 0.0f)</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  , fov(90.0_d)</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  , fov(static_cast&lt;float&gt;(pi())/2.0f)</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  {</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  }</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keyword">virtual</span> ~<a class="code" href="classCamera.html">Camera</a>() {}</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">void</span> setFOV(<span class="keyword">const</span> <a class="code" href="classangle__t.html">angle_t</a> f)</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">void</span> setFOV(<span class="keyword">const</span> <span class="keywordtype">float</span> f)</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  {</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    fov = f;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  }</div>
@@ -154,7 +154,7 @@ $(document).ready(function(){initNavTree('camera_8h_source.html','');});
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  }</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keyword">inline</span> glm::mat4 getProjection(<span class="keyword">const</span> <span class="keywordtype">float</span> width, <span class="keyword">const</span> <span class="keywordtype">float</span> height)<span class="keyword"> const</span></div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">  </span>{</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">return</span> glm::perspective(static_cast&lt;float&gt;(fov.<a class="code" href="classangle__t.html#a0a1cb0672581c07b20184c34d2f03515">radians</a>()), width/height, 0.1f, 1000000.0f);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">return</span> glm::perspective(fov, width/height, 0.1f, 1000000.0f);</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  }</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keyword">inline</span> glm::vec3 lookingFrom()</div>
@@ -181,15 +181,13 @@ $(document).ready(function(){initNavTree('camera_8h_source.html','');});
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  glm::vec3 upVector;</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <a class="code" href="classangle__t.html">angle_t</a> fov;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keywordtype">float</span> fov;</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;};</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keyword">extern</span> <a class="code" href="classCamera.html">Camera</a>* camera;</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="classObject_html"><div class="ttname"><a href="classObject.html">Object</a></div><div class="ttdef"><b>Definition:</b> object.h:9</div></div>
-<div class="ttc" id="classangle__t_html_a0a1cb0672581c07b20184c34d2f03515"><div class="ttname"><a href="classangle__t.html#a0a1cb0672581c07b20184c34d2f03515">angle_t::radians</a></div><div class="ttdeci">static angle_t radians(const double r)</div><div class="ttdef"><b>Definition:</b> angle.h:49</div></div>
-<div class="ttc" id="classangle__t_html"><div class="ttname"><a href="classangle__t.html">angle_t</a></div><div class="ttdef"><b>Definition:</b> angle.h:20</div></div>
 <div class="ttc" id="classCamera_html"><div class="ttname"><a href="classCamera.html">Camera</a></div><div class="ttdef"><b>Definition:</b> camera.h:12</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -197,7 +195,7 @@ $(document).ready(function(){initNavTree('camera_8h_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_996f45160da62e1a3d7f6046fad68f51.html">engine</a></li><li class="navelem"><a class="el" href="dir_368466abb128e62e14d7a4e6cbec70ea.html">object</a></li><li class="navelem"><b>camera.h</b></li>
-    <li class="footer">Generated on Sat Dec 30 2017 17:47:13 for engine by
+    <li class="footer">Generated on Sun Apr 1 2018 16:54:26 for engine by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

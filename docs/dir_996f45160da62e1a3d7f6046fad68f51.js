@@ -5,6 +5,7 @@ var dir_996f45160da62e1a3d7f6046fad68f51 =
     [ "util", "dir_e3ae55271edb648fb32b969ad2836458.html", "dir_e3ae55271edb648fb32b969ad2836458" ],
     [ "visage", "dir_95f3857c81d94f67c5b44f8d78a8336d.html", "dir_95f3857c81d94f67c5b44f8d78a8336d" ],
     [ "event.h", "event_8h_source.html", null ],
+    [ "fontmanager.h", "fontmanager_8h_source.html", null ],
     [ "input.h", "input_8h_source.html", null ],
     [ "internal.h", "internal_8h_source.html", null ],
     [ "meshmanager.h", "meshmanager_8h_source.html", null ],

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['texture',['Texture',['../classTexture.html',1,'']]],
-  ['texturemanager',['TextureManager',['../classTextureManager.html',1,'']]]
+  ['shader',['Shader',['../classengine_1_1Shader.html',1,'engine']]],
+  ['shadermanager',['ShaderManager',['../classengine_1_1ShaderManager.html',1,'engine']]]
 ];

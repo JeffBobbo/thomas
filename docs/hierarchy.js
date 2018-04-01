@@ -7,12 +7,13 @@ var hierarchy =
     [ "Event", "classEvent.html", null ],
     [ "EventReceiver", "classEventReceiver.html", [
       [ "gui::Element", "classgui_1_1Element.html", [
-        [ "gui::Window", "classgui_1_1Window.html", [
-          [ "HWindow", "classHWindow.html", null ]
-        ] ]
+        [ "gui::Label", "classgui_1_1Label.html", null ],
+        [ "gui::Window", "classgui_1_1Window.html", null ]
       ] ]
     ] ],
     [ "Face", "structFace.html", null ],
+    [ "Font", "classFont.html", null ],
+    [ "FontManager", "classFontManager.html", null ],
     [ "Event::GUIEvent", "structEvent_1_1GUIEvent.html", null ],
     [ "HSVA", "structHSVA.html", null ],
     [ "interval_t", "classinterval__t.html", null ],
