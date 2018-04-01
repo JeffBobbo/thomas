@@ -50,6 +50,10 @@ public:
    */
   inline bool isOn() const { return start != -1; }
   /**
+   * @return True if this interval is off
+   */
+  inline bool isOff() const { return start == -1; }
+  /**
    * @return True if this interval has had at least one tick elapse
    */
   inline bool isTime() const { return ::ticks() > start + duration; }
