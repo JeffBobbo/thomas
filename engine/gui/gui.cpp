@@ -27,35 +27,6 @@ gui::Element* gui::focused()
   return focus;
 }
 
-#include <iostream>
-class HWindow : public gui::Window
-{
-  virtual bool onEvent(const Event& e) override
-  {
-    switch (e.type)
-    {
-      case Event::Type::GUI:
-      {
-        if (e.gui.type == Event::GUIType::ELEMENT_ENTER)
-        {
-          setColour(glm::vec4(1.0f, 0.0f, 0.0f, 1.0f));
-          std::cout << "going in" << std::endl;
-        }
-        else if (e.gui.type == Event::GUIType::ELEMENT_LEAVE)
-        {
-          setColour(glm::vec4(0.0f, 1.0f, 0.0f, 1.0f));
-          std::cout << "going out" << std::endl;
-        }
-        return true;
-      }
-      break;
-      default:
-      break;
-    }
-    return false;
-  }
-};
-
 void gui::init()
 {
   gui::Label::init();
@@ -63,18 +34,6 @@ void gui::init()
   node->position = glm::ivec4(0, 0, 0, 0);
   node->relative = glm::vec4(0.0f, 0.0f, 1.0f, 1.0f);
   node->setColour(glm::vec4(0.0f, 0.0f, 0.0f, 0.0f));
-
-  HWindow* right = new HWindow();
-  right->position = glm::ivec4(120, 120, 160, 240);
-  right->relative = glm::ivec4(0.0f, 0.0f, 0.0f, 0.0f);
-  right->setColour(glm::vec4(0.0f, 0.0f, 1.0f, 1.0f));
-  node->add(right);
-
-  gui::Window* sub = new gui::Window();
-  sub->position = glm::ivec4(0, 0, 150, 74);
-  sub->relative = glm::vec4(0.0f, 0.0f, 0.0f, 0.0f);
-  sub->setImage(TextureManager::getTexture("img/ui/barframe.png"));
-  node->add(sub);
 }
 
 void gui::update()
