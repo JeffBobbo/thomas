@@ -21,6 +21,7 @@ namespace gui
 
     virtual Type type() const = 0;
 
+    virtual void idle() = 0;
     virtual void draw() const = 0;
 
     inline void setParent(Element* e) { parent = e; }

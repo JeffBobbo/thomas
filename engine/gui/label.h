@@ -33,6 +33,7 @@ namespace gui
 
     inline virtual Type type() const override { return Element::Type::LABEL; }
 
+    virtual void idle() final {};
     virtual void draw() const final;
 
     void setText(const std::string& t);

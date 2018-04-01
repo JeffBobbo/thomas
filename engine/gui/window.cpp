@@ -22,6 +22,12 @@ namespace gui
     removeChildren();
   }
 
+  void Window::idle()
+  {
+    for (auto& it : children)
+      it->idle();
+  }
+
   void Window::draw() const
   {
     if (!isVisible())

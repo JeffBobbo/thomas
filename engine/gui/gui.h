@@ -8,7 +8,7 @@ namespace gui
   gui::Window* root();
   gui::Element* focused();
   void init();
-  void update();
+  void idle();
   void draw();
   void close();
 }

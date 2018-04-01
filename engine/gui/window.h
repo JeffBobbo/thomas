@@ -17,6 +17,7 @@ namespace gui
 
     inline virtual Type type() const override { return Element::Type::WINDOW; }
 
+    virtual void idle();
     virtual void draw() const final;
 
     virtual bool onEvent(const Event& e)

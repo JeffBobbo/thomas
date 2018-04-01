@@ -36,8 +36,11 @@ void gui::init()
   node->setColour(glm::vec4(0.0f, 0.0f, 0.0f, 0.0f));
 }
 
-void gui::update()
+void gui::idle()
 {
+  if (!node)
+    return;
+  node->idle();
 }
 
 void gui::draw()
