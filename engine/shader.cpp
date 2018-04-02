@@ -32,7 +32,8 @@ Shader::Shader(const std::string& path, const GLenum t)
 
   GLint status;
   glGetShaderiv(shader, GL_COMPILE_STATUS, &status);
-  assert(status == GL_TRUE);
+  if (status != GL_TRUE)
+    throw path + "\n" + Shader::infoLog();
 }
 
 Shader::~Shader()
@@ -75,14 +76,14 @@ void Program::link() const
   glLinkProgram(program);
   GLint status;
   glGetProgramiv(program, GL_LINK_STATUS, &status);
-  assert(status == GL_TRUE);
+  if (status != GL_TRUE)
+    throw infoLog();
 }
 
 GLint Program::uniform(const char* name) const
 {
   GLint uni = glGetUniformLocation(handle(), name);
 
-  //if (uni >= 0)
   assert(uni >= 0);
   return uni;
 }
@@ -91,7 +92,6 @@ GLint Program::attribute(const char* name) const
 {
   GLint attrib = glGetAttribLocation(handle(), name);
 
-  //if (attrib >= 0)
   assert(attrib >= 0);
   return attrib;
 }
