@@ -1,8 +1,8 @@
 include make.objects
 
 # general compiler settings
-CPPFLAGS=
-CXXFLAGS=-Wall -Wextra -Wpedantic -std=c++11 -DGLM_FORCE_RADIANS
+CPPFLAGS=-DGLM_FORCE_RADIANS
+CXXFLAGS=-Wall -Wextra -Wpedantic -std=c++11
 
 debug: CXXFLAGS+=-O0 -ggdb
 debug: all
