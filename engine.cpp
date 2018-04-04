@@ -45,9 +45,6 @@ void engine::init(const int w, const int h, EventReceiver* const recv)
   receiver = recv;
   initTicks();
 
-  //gltInit();
-
-  glEnable(GL_DEPTH_TEST);
   glEnable(GL_TEXTURE_2D);
   glEnable(GL_CULL_FACE);
   glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
