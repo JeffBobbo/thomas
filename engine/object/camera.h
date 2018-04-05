@@ -16,6 +16,7 @@ public:
   : targetObject(nullptr), targetPosition(0.0f)
   , sourceObject(nullptr), sourcePosition(0.0f)
   , upVector(0.0f, 1.0f, 0.0f)
+  , near(0.1f), far(1000.0f)
   , fov(static_cast<float>(pi())/2.0f)
   {
   }
@@ -25,6 +26,8 @@ public:
   {
     fov = f;
   }
+  inline void nearClip(const float f) { near = f; }
+  inline void farClip(const float f) { far = f; }
   inline void target(const Object* o)
   {
     targetObject = o;
@@ -49,7 +52,7 @@ public:
   }
   inline glm::mat4 getProjection(const float width, const float height) const
   {
-    return glm::perspective(fov, width/height, 0.1f, 1000000.0f);
+    return glm::perspective(fov, width/height, near, far);
   }
 
   inline glm::vec3 lookingFrom()
@@ -76,6 +79,7 @@ private:
 
   glm::vec3 upVector;
 
+  float near, far;
   float fov;
 };
 
