@@ -25,6 +25,8 @@ VisageSkybox::~VisageSkybox()
 
 void VisageSkybox::draw()
 {
+  Visage::draw();
+
   GLboolean oldCull = glIsEnabled(GL_CULL_FACE);
 
   glDisable(GL_CULL_FACE);
@@ -34,10 +36,6 @@ void VisageSkybox::draw()
   glBindVertexArray(skybox_vao);
   glActiveTexture(GL_TEXTURE0);
 
-  glm::mat4 model = glm::translate(glm::mat4(1.0f), camera->getPosition());
-  const engine::Program* program = engine::ProgramManager::get("skybox");
-  GLint uniModel = glGetUniformLocation(program->handle(), "model");
-  glUniformMatrix4fv(uniModel, 1, GL_FALSE, glm::value_ptr(model));
   for (int i = 0; i < 6; ++i)
   {
     glBindTexture(GL_TEXTURE_2D, textures[i]);
