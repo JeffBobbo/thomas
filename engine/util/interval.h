@@ -30,6 +30,11 @@ public:
   inline void setSeconds(const millis_t seconds) { duration = seconds * 1000; }
 
   /**
+   * @return the duration of the interval
+   */
+  inline millis_t getDuration() const { return duration; }
+
+  /**
    * Turns off the interval
    */
   inline void turnOff() { start = -1; }
