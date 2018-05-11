@@ -12,8 +12,8 @@ release: CPPFLAGS+=-DNDEBUG
 release: CXXFLAGS+=-O3
 release: all
 
-all: $(ENGINE) $(OBJECT) $(GUI) $(UTIL) $(VISAGE)
-	ar rcs libengine.a $(ENGINE) $(OBJECT) $(GUI) $(UTIL) $(VISAGE)
+all: $(ENGINE) $(OBJECT) $(GUI) $(UTIL) $(VISAGE) $(EXTERNAL)
+	ar rcs libengine.a $(ENGINE) $(OBJECT) $(GUI) $(UTIL) $(VISAGE) $(EXTERNAL)
 
 %.o : %.cpp
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $< -o $@

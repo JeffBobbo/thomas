@@ -35,9 +35,12 @@ void VisageMesh::draw()
     glBindTexture(GL_TEXTURE_2D, 0);
   }
 
-  glBindVertexArray(mesh->getVAO());
-  glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, mesh->getEBO());
-  glDrawElements(GL_TRIANGLES, mesh->getIndicies().size(), GL_UNSIGNED_INT, (void*)0);
+  for (size_t i = 0; i < mesh->getNumMeshes(); ++i)
+  {
+    glBindVertexArray(mesh->getVAO(i));
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, mesh->getEBO(i));
+    glDrawElements(GL_TRIANGLES, mesh->getIndexCount(i), GL_UNSIGNED_INT, (void*)0);
+  }
 }
 
 void VisageMesh::load(const std::string& name)

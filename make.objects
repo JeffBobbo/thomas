@@ -27,6 +27,9 @@ engine/visage/mesh.o \
 engine/visage/particle.o \
 engine/visage/skybox.o
 
+EXTERNAL=\
+external/tiny_obj_loader.o
+
 TYPE_T=\
 tests/types/angle.t.out \
 tests/types/colour.t.out \
