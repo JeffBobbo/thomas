@@ -37,22 +37,30 @@ Mesh::Mesh(const std::vector<tinyobj::shape_t >& shapes, const std::vector<tinyo
   glGenBuffers(shapes.size(), vbo_t);
   glGenBuffers(shapes.size(), vbo_n);
   glGenBuffers(shapes.size(), ebo);
+
+  float longest = 0.0f;
   for (size_t i = 0; i < shapes.size(); ++i)
   {
     tinyobj::shape_t s = shapes[i];
     tinyobj::mesh_t& mesh = s.mesh;
 
-    float longest = 0.0f;
     for (size_t i = 0; i < mesh.positions.size(); i += 3)
     {
-      float l = mesh.positions[i  ]*mesh.positions[i  ] + 
+      float l = mesh.positions[i  ]*mesh.positions[i  ] +
                 mesh.positions[i+1]*mesh.positions[i+1] +
                 mesh.positions[i+2]*mesh.positions[i+2];
 
       if (l > longest)
         longest = l;
     }
-    longest = std::sqrt(longest);
+  }
+  longest = std::sqrt(longest);
+
+  for (size_t i = 0; i < shapes.size(); ++i)
+  {
+    tinyobj::shape_t s = shapes[i];
+    tinyobj::mesh_t& mesh = s.mesh;
+
     for (size_t i = 0; i < mesh.positions.size(); ++i)
       mesh.positions[i] /= longest;
 
