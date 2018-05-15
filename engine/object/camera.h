@@ -16,7 +16,7 @@ public:
   : targetObject(nullptr), targetPosition(0.0f)
   , sourceObject(nullptr), sourcePosition(0.0f)
   , upVector(0.0f, 1.0f, 0.0f)
-  , near(0.1f), far(1000.0f)
+  , near(0.1f), far(100000.0f)
   , fov(static_cast<float>(pi())/2.0f)
   {
   }
