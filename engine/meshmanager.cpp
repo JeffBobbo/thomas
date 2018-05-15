@@ -154,7 +154,14 @@ void MeshManager::loadFile(const std::string& file)
 {
   std::vector<tinyobj::shape_t > shapes;
   std::vector<tinyobj::material_t > materials;
-  std::string error = tinyobj::LoadObj(shapes, materials, file.c_str());
+
+  std::string base = "";
+  std::string::size_type n = file.find_last_of("/");
+  if (n != std::string::npos)
+    base = file.substr(0, n+1);
+  std::cout << base << std::endl;
+
+  std::string error = tinyobj::LoadObj(shapes, materials, file.c_str(), base.c_str());
   if (error.size())
   {
     std::cerr << error << std::endl;

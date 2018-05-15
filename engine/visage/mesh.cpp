@@ -37,6 +37,12 @@ void VisageMesh::draw()
 
   for (size_t i = 0; i < mesh->getNumMeshes(); ++i)
   {
+    if ((uni = engine::Program::active()->uniform("material.ambient")) >= 0)
+      glUniform3fv(uni, 1, mesh->getMaterial(i).ambient);
+    if ((uni = engine::Program::active()->uniform("material.diffuse")) >= 0)
+      glUniform3fv(uni, 1, mesh->getMaterial(i).diffuse);
+    if ((uni = engine::Program::active()->uniform("material.specular")) >= 0)
+      glUniform3fv(uni, 1, mesh->getMaterial(i).specular);
     glBindVertexArray(mesh->getVAO(i));
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, mesh->getEBO(i));
     glDrawElements(GL_TRIANGLES, mesh->getIndexCount(i), GL_UNSIGNED_INT, (void*)0);

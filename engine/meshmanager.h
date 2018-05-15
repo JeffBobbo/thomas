@@ -24,6 +24,7 @@ public:
   inline size_t getIndexCount(const size_t i) const { return meshes[i].indices.size(); }
   inline const GLuint& getEBO(const size_t i) const { return ebo[i]; }
   inline const GLuint& getVAO(const size_t i) const { return vao[i]; }
+  inline const tinyobj::material_t& getMaterial(const size_t i) const { return materials[i]; }
   //inline const tinyobj::mesh_t& getMesh(const ssize_t i) const {meshes[i]; }
 
 private:
