@@ -84,7 +84,7 @@ GLint Program::uniform(const char* name) const
 {
   GLint uni = glGetUniformLocation(handle(), name);
 
-  assert(uni >= 0);
+  //assert(uni >= 0);
   return uni;
 }
 
@@ -92,7 +92,7 @@ GLint Program::attribute(const char* name) const
 {
   GLint attrib = glGetAttribLocation(handle(), name);
 
-  assert(attrib >= 0);
+  //assert(attrib >= 0);
   return attrib;
 }
 
