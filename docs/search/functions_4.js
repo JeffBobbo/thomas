@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['operator_20bool',['operator bool',['../classangle__t.html#a42e48e83d6078fcbf4311580ab947508',1,'angle_t']]],
-  ['operator_25',['operator%',['../classangle__t.html#af25cbc6500349f4ac4c829ca5e99b797',1,'angle_t']]],
-  ['operator_25_3d',['operator%=',['../classangle__t.html#a8448589a80aef4906225c4270710855e',1,'angle_t']]],
-  ['operator_3c',['operator&lt;',['../classangle__t.html#ab71af2ade09e771f1bebbc940cd688e2',1,'angle_t']]],
-  ['operator_3d_3d',['operator==',['../classangle__t.html#ad890dcdc1aa3ec999c1f5f77fbf384de',1,'angle_t']]]
+  ['empty',['empty',['../classengine_1_1util_1_1weightedlist__t.html#aa7347c4461ae5ea7301caa7ad2336ce8',1,'engine::util::weightedlist_t']]],
+  ['end',['end',['../classengine_1_1util_1_1stopwatch__t.html#a1bf9b130b46c38f40bafcf13aeb535c1',1,'engine::util::stopwatch_t::end()'],['../classengine_1_1util_1_1weightedlist__t.html#a2989517baf4d449e630b03702907d201',1,'engine::util::weightedlist_t::end()']]],
+  ['erase',['erase',['../classengine_1_1util_1_1weightedlist__t.html#a54c221f3efccf55ebfe799beb84aad41',1,'engine::util::weightedlist_t']]]
 ];

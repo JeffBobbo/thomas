@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['degrees',['degrees',['../classangle__t.html#ad9b77e1da111f3e4323b952ea754a267',1,'angle_t::degrees(const double d)'],['../classangle__t.html#a8a2bc68c4d0d3de0441acdf211934e6e',1,'angle_t::degrees() const ']]]
+  ['choose',['choose',['../classengine_1_1util_1_1weightedlist__t.html#a53e943dc796d0aa9a7a4326d8c8d2840',1,'engine::util::weightedlist_t']]],
+  ['cos',['cos',['../classangle__t.html#abf7ee20976aeed515e36b05d9e98aca4',1,'angle_t']]]
 ];

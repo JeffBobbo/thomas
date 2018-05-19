@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['setmillis',['setMillis',['../classinterval__t.html#a44902cb140f8c68bbea956f9bfbeabe1',1,'interval_t']]],
-  ['setseconds',['setSeconds',['../classinterval__t.html#a7ffce6c5605a438d8d8eeb20232fbb88',1,'interval_t']]],
-  ['sin',['sin',['../classangle__t.html#a8b8769cc3a1dc9bb1cd19790ebdb386e',1,'angle_t']]]
+  ['operator_20bool',['operator bool',['../classangle__t.html#a42e48e83d6078fcbf4311580ab947508',1,'angle_t']]],
+  ['operator_25',['operator%',['../classangle__t.html#af25cbc6500349f4ac4c829ca5e99b797',1,'angle_t']]],
+  ['operator_25_3d',['operator%=',['../classangle__t.html#a8448589a80aef4906225c4270710855e',1,'angle_t']]],
+  ['operator_3c',['operator&lt;',['../classangle__t.html#ab71af2ade09e771f1bebbc940cd688e2',1,'angle_t']]],
+  ['operator_3d_3d',['operator==',['../classangle__t.html#ad890dcdc1aa3ec999c1f5f77fbf384de',1,'angle_t']]]
 ];

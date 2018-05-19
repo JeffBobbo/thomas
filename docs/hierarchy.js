@@ -6,12 +6,11 @@ var hierarchy =
     [ "Camera", "classCamera.html", null ],
     [ "Event", "classEvent.html", null ],
     [ "EventReceiver", "classEventReceiver.html", [
-      [ "gui::Element", "classgui_1_1Element.html", [
-        [ "gui::Label", "classgui_1_1Label.html", null ],
-        [ "gui::Window", "classgui_1_1Window.html", null ]
+      [ "engine::gui::Element", "classengine_1_1gui_1_1Element.html", [
+        [ "engine::gui::Label", "classengine_1_1gui_1_1Label.html", null ],
+        [ "engine::gui::Window", "classengine_1_1gui_1_1Window.html", null ]
       ] ]
     ] ],
-    [ "Face", "structFace.html", null ],
     [ "Font", "classFont.html", null ],
     [ "FontManager", "classFontManager.html", null ],
     [ "Event::GUIEvent", "structEvent_1_1GUIEvent.html", null ],
@@ -30,19 +29,19 @@ var hierarchy =
     [ "Octree", "classOctree.html", null ],
     [ "OctreeNode", "classOctreeNode.html", null ],
     [ "Particle", "structParticle.html", null ],
-    [ "Perlin", "classPerlin.html", null ],
     [ "engine::Program", "classengine_1_1Program.html", null ],
     [ "engine::ProgramManager", "classengine_1_1ProgramManager.html", null ],
     [ "engine::Shader", "classengine_1_1Shader.html", null ],
     [ "engine::ShaderManager", "classengine_1_1ShaderManager.html", null ],
+    [ "engine::util::stopwatch_t", "classengine_1_1util_1_1stopwatch__t.html", null ],
     [ "Texture", "classTexture.html", null ],
     [ "TextureManager", "classTextureManager.html", null ],
-    [ "VertexTriplet", "structVertexTriplet.html", null ],
     [ "Visage", "classVisage.html", [
       [ "ParticleSystem", "classParticleSystem.html", null ],
       [ "VisageComplex", "classVisageComplex.html", null ],
       [ "VisageMesh", "classVisageMesh.html", null ],
       [ "VisageSkybox", "classVisageSkybox.html", null ]
     ] ],
+    [ "engine::util::weightedlist_t< T >", "classengine_1_1util_1_1weightedlist__t.html", null ],
     [ "mouse::Wheel", "structmouse_1_1Wheel.html", null ]
 ];

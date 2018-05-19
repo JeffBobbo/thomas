@@ -112,40 +112,27 @@ $(document).ready(function(){initNavTree('classMesh.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa200b9e345e84f759c60c97d1ea97059"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa200b9e345e84f759c60c97d1ea97059"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Mesh</b> (const std::string &amp;name)</td></tr>
-<tr class="separator:aa200b9e345e84f759c60c97d1ea97059"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72da0ae35cbb761c7503d5839ddb9cd4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a72da0ae35cbb761c7503d5839ddb9cd4"></a>
-const std::vector&lt; int32_t &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getIndicies</b> () const </td></tr>
-<tr class="separator:a72da0ae35cbb761c7503d5839ddb9cd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad42d800e1edfbf9bc10501db8f17d630"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad42d800e1edfbf9bc10501db8f17d630"></a>
-const std::vector&lt; glm::vec3 &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getVertices</b> () const </td></tr>
-<tr class="separator:ad42d800e1edfbf9bc10501db8f17d630"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe10c610fa717d691cce2f0fe3b2b5ab"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afe10c610fa717d691cce2f0fe3b2b5ab"></a>
-const std::vector&lt; glm::vec2 &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getUVCoords</b> () const </td></tr>
-<tr class="separator:afe10c610fa717d691cce2f0fe3b2b5ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad10695baa0bafc1491f5a611144af8a3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad10695baa0bafc1491f5a611144af8a3"></a>
-const std::vector&lt; glm::vec3 &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getNormals</b> () const </td></tr>
-<tr class="separator:ad10695baa0bafc1491f5a611144af8a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3993d4b01efe3017f46d3d8156b4883f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3993d4b01efe3017f46d3d8156b4883f"></a>
-const GLuint &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getVBO_V</b> () const </td></tr>
-<tr class="separator:a3993d4b01efe3017f46d3d8156b4883f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5165f4203dca3004b308cb54cbe4acea"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5165f4203dca3004b308cb54cbe4acea"></a>
-const GLuint &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getVBO_T</b> () const </td></tr>
-<tr class="separator:a5165f4203dca3004b308cb54cbe4acea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe9e3998af85114e2497d8ac30f98ce1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abe9e3998af85114e2497d8ac30f98ce1"></a>
-const GLuint &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getVBO_N</b> () const </td></tr>
-<tr class="separator:abe9e3998af85114e2497d8ac30f98ce1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e95ea5b1e6bd6c851a2cb557f025184"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0e95ea5b1e6bd6c851a2cb557f025184"></a>
-const GLuint &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getEBO</b> () const </td></tr>
-<tr class="separator:a0e95ea5b1e6bd6c851a2cb557f025184"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7e9efe3e716457aa01041cb7dfeaab3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa7e9efe3e716457aa01041cb7dfeaab3"></a>
-const GLuint &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getVAO</b> () const </td></tr>
-<tr class="separator:aa7e9efe3e716457aa01041cb7dfeaab3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ea209ea30b1d0536625113675c548ff"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4ea209ea30b1d0536625113675c548ff"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Mesh</b> (const std::vector&lt; tinyobj::shape_t &gt; &amp;shapes, const std::vector&lt; tinyobj::material_t &gt; &amp;m)</td></tr>
+<tr class="separator:a4ea209ea30b1d0536625113675c548ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08ac31016e8d6f7951a78aae7ff07581"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a08ac31016e8d6f7951a78aae7ff07581"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>getNumMeshes</b> () const </td></tr>
+<tr class="separator:a08ac31016e8d6f7951a78aae7ff07581"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad40e443fbbdb875b936c31b796a0d93f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad40e443fbbdb875b936c31b796a0d93f"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>getIndexCount</b> (const size_t i) const </td></tr>
+<tr class="separator:ad40e443fbbdb875b936c31b796a0d93f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a775d7111769d3d0dad584894fa01261b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a775d7111769d3d0dad584894fa01261b"></a>
+const GLuint &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getEBO</b> (const size_t i) const </td></tr>
+<tr class="separator:a775d7111769d3d0dad584894fa01261b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cd1c9236496c2c162c6fe1584ce6d8b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4cd1c9236496c2c162c6fe1584ce6d8b"></a>
+const GLuint &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getVAO</b> (const size_t i) const </td></tr>
+<tr class="separator:a4cd1c9236496c2c162c6fe1584ce6d8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e8ffd00dbe0463e8c01500436dcb830"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5e8ffd00dbe0463e8c01500436dcb830"></a>
+const tinyobj::material_t &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getMaterial</b> (const size_t i) const </td></tr>
+<tr class="separator:a5e8ffd00dbe0463e8c01500436dcb830"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following files:<ul>
-<li>engine/<a class="el" href="meshmanager_8h_source.html">meshmanager.h</a></li>
-<li>engine/meshmanager.cpp</li>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>include/engine/<a class="el" href="meshmanager_8h_source.html">meshmanager.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -153,7 +140,7 @@ const GLuint &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getVAO<
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classMesh.html">Mesh</a></li>
-    <li class="footer">Generated on Sun Apr 1 2018 16:54:26 for engine by
+    <li class="footer">Generated on Sat May 19 2018 20:05:08 for engine by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>
