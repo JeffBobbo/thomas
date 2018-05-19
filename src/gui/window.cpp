@@ -1,4 +1,4 @@
-#include "window.h"
+#include <gui/window.h>
 
 #include <GL/glew.h>
 
@@ -6,7 +6,7 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
-#include "../shader.h"
+#include <shader.h>
 
 namespace gui
 {

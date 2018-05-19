@@ -1,4 +1,4 @@
-#include "colour.h"
+#include <util/colour.h>
 
 ARGB::operator HSVA() const
 {

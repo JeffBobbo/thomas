@@ -1,6 +1,6 @@
-#include "object.h"
+#include <object/object.h>
 
-#include "../../engine.h"
+#include <engine.h>
 
 void Object::move()
 {

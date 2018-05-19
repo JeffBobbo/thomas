@@ -1,18 +1,18 @@
-#include "gui.h"
+#include <gui/gui.h>
 
 #include <GL/glew.h>
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
-#include "../internal.h"
-#include "../event.h"
-#include "../receiver.h"
-#include "../shader.h"
-#include "../texturemanager.h"
-#include "../../engine.h"
+#include <internal.h>
+#include <event.h>
+#include <receiver.h>
+#include <shader.h>
+#include <texturemanager.h>
+#include <engine.h>
 
-#include "label.h"
+#include <gui/label.h>
 
 gui::Window* node = nullptr;
 gui::Element* focus = nullptr;

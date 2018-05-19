@@ -1,31 +1,30 @@
-ENGINE=\
-engine.o \
-engine/input.o \
-engine/meshmanager.o \
-engine/shader.o \
-engine/texturemanager.o
+src=\
+src/.o \
+src/input.o \
+src/meshmanager.o \
+src/shader.o \
+src/texturemanager.o
 
 OBJECT=\
-engine/object/camera.o \
-engine/object/object.o \
+src/object/camera.o \
+src/object/object.o \
 
 GUI=\
-engine/gui/element.o \
-engine/gui/gui.o \
-engine/gui/label.o \
-engine/gui/window.o
+src/gui/element.o \
+src/gui/gui.o \
+src/gui/label.o \
+src/gui/window.o
 
 UTIL=\
-engine/util/colour.o \
-engine/util/matrix.o \
-engine/util/perlin.o \
-engine/util/random.o \
-engine/util/util.o
+src/util/colour.o \
+src/util/matrix.o \
+src/util/random.o \
+src/util/util.o
 
 VISAGE=\
-engine/visage/mesh.o \
-engine/visage/particle.o \
-engine/visage/skybox.o
+src/visage/mesh.o \
+src/visage/particle.o \
+src/visage/skybox.o
 
 EXTERNAL=\
 external/tiny_obj_loader.o

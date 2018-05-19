@@ -1,7 +1,7 @@
-#include "mesh.h"
+#include <visage/mesh.h>
 
-#include "../texturemanager.h"
-#include "../shader.h"
+#include <texturemanager.h>
+#include <shader.h>
 
 void VisageMesh::draw()
 {

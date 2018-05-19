@@ -1,13 +1,13 @@
-#include "skybox.h"
+#include <visage/skybox.h>
 
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
-#include "../object/camera.h"
-#include "../meshmanager.h"
-#include "../shader.h"
-#include "../texturemanager.h"
+#include <object/camera.h>
+#include <meshmanager.h>
+#include <shader.h>
+#include <texturemanager.h>
 
 VisageSkybox::~VisageSkybox()
 {

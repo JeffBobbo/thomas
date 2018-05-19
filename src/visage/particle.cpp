@@ -1,15 +1,15 @@
-#include "particle.h"
+#include <visage/particle.h>
 
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 #include <glm/gtx/random.hpp>
 
-#include "../../engine.h"
-#include "../shader.h"
-#include "../texturemanager.h"
-#include "../object/camera.h"
-#include "../util/random.h"
-#include "../util/util.h"
+#include <engine.h>
+#include <shader.h>
+#include <texturemanager.h>
+#include <object/camera.h>
+#include <util/random.h>
+#include <util/util.h>
 
 ParticleSystem::ParticleSystem()
   : max(1)

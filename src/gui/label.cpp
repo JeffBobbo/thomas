@@ -1,4 +1,4 @@
-#include "label.h"
+#include <gui/label.h>
 
 #include <iostream>
 

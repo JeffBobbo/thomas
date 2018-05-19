@@ -7,7 +7,7 @@
 //#define GLT_MANUAL_VIEWPORT
 //#include "external/gltext.h"
 
-#include "engine/event.h"
+#include <event.h>
 
 
 extern int screenWidth;

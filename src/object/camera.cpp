@@ -1,4 +1,4 @@
-#include "camera.h"
+#include <object/camera.h>
 
 glm::mat4 Camera::getView()
 {

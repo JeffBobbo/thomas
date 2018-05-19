@@ -11,7 +11,7 @@
 #include <GLFW/glfw3.h>
 #include <glm/glm.hpp>
 
-#include "../external/tiny_obj_loader.h"
+#include <tiny_obj_loader.h>
 
 class Mesh final
 {

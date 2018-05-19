@@ -1,6 +1,6 @@
-#include "element.h"
+#include <gui/element.h>
 
-#include "../../engine.h"
+#include <engine.h>
 
 namespace gui
 {
