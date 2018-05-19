@@ -4,6 +4,8 @@
 
 #include "../../external/gltext.h"
 
+namespace engine
+{
 namespace gui
 {
   const int Label::ALIGN_LEFT = GLT_LEFT;
@@ -75,4 +77,5 @@ namespace gui
   {
     gltSetText(text, t.c_str());
   }
+}
 }

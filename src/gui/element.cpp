@@ -2,6 +2,8 @@
 
 #include <engine.h>
 
+namespace engine
+{
 namespace gui
 {
   Element::Element()
@@ -62,4 +64,5 @@ namespace gui
     size.x = r.z - r.x;
     size.y = r.w - r.y;
   }
+}
 }

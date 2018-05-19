@@ -6,6 +6,8 @@
 #include "../receiver.h"
 class Event;
 
+namespace engine
+{
 namespace gui
 {
   class Element : public EventReceiver
@@ -36,6 +38,7 @@ namespace gui
   protected:
     Element* parent;
   };
+}
 }
 
 #endif

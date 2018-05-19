@@ -1,5 +1,5 @@
 #include <util/util.h>
-#include <internal.h>
+#include "../internal.h"
 
 millis_t tStart;
 millis_t tElapsed;

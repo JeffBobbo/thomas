@@ -11,6 +11,8 @@
 
 struct GLTtext;
 
+namespace engine
+{
 namespace gui
 {
   class Label : public Element
@@ -49,6 +51,7 @@ namespace gui
     int vAlign;
     glm::vec4 colour;
   };
+}
 }
 
 #endif

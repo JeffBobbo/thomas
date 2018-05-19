@@ -7,6 +7,8 @@
 
 #include <GL/glew.h>
 
+namespace engine
+{
 namespace gui
 {
   class Window : public Element
@@ -53,6 +55,7 @@ namespace gui
     glm::vec4 colour;
     GLint texture;
   };
+}
 }
 
 #endif

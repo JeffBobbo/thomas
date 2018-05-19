@@ -8,6 +8,8 @@
 
 #include <shader.h>
 
+namespace engine
+{
 namespace gui
 {
   Window::Window()
@@ -99,4 +101,5 @@ namespace gui
     for (auto& it : children)
       it->draw();
   }
+}
 }

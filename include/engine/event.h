@@ -43,8 +43,8 @@ public:
 
   struct GUIEvent
   {
-    gui::Element* caller;
-    gui::Element* element;
+    engine::gui::Element* caller;
+    engine::gui::Element* element;
     Event::GUIType type;
   };
 

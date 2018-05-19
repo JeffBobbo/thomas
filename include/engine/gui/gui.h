@@ -3,14 +3,17 @@
 
 #include "window.h"
 
+namespace engine
+{
 namespace gui
 {
-  gui::Window* root();
-  gui::Element* focused();
+  engine::gui::Window* root();
+  engine::gui::Element* focused();
   void init();
   void idle();
   void draw();
   void close();
+}
 }
 
 #endif

@@ -8,9 +8,12 @@ void updateTicks();
 
 extern EventReceiver* receiver;
 
+namespace engine
+{
 namespace gui
 {
   void onEvent(const Event& e);
+}
 }
 
 #endif

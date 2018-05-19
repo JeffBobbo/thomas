@@ -5,7 +5,7 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
-#include <internal.h>
+#include <../src/internal.h>
 #include <event.h>
 #include <receiver.h>
 #include <shader.h>
@@ -14,6 +14,8 @@
 
 #include <gui/label.h>
 
+namespace engine
+{
 gui::Window* node = nullptr;
 gui::Element* focus = nullptr;
 
@@ -83,4 +85,5 @@ void gui::onEvent(const Event& e)
     r = node->onEvent(e);
   if (!r)
     receiver->onEvent(e);
+}
 }
