@@ -8,7 +8,7 @@
 
 #include <shader.h>
 
-namespace engine
+namespace thomas
 {
 namespace gui
 {
@@ -63,7 +63,7 @@ namespace gui
       glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ebo);
       glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(elements), elements, GL_STATIC_DRAW);
 
-      const engine::Program* program = engine::ProgramManager::get("gui");
+      const thomas::Program* program = thomas::ProgramManager::get("gui");
       GLint posAttrib = glGetAttribLocation(program->handle(), "in_vertex");
       glEnableVertexAttribArray(posAttrib);
       glVertexAttribPointer(posAttrib, 3, GL_FLOAT, GL_FALSE, 5*sizeof(float), 0);
@@ -74,7 +74,7 @@ namespace gui
     }
 
     glBindVertexArray(vao);
-    const engine::Program* program = engine::Program::active();
+    const thomas::Program* program = thomas::Program::active();
 
     glm::mat4 model = glm::mat4(1.0f);
     glm::ivec2 pos, size;

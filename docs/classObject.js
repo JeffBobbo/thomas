@@ -12,10 +12,10 @@ var classObject =
     [ "getVelocity", "classObject.html#a64b5aef0ba9f7e5e26f51262ea6217ae", null ],
     [ "idle", "classObject.html#aeb16b14af46e59699427f53623bcf102", null ],
     [ "move", "classObject.html#aadcb52925233cbbbd0fcc488cee0dd13", null ],
-    [ "setVisage", "classObject.html#a55e2db65fbde8ab4c2f7733f32489d05", null ],
+    [ "setVisage", "classObject.html#a12c35238d1bda7bd522f74fea53662a1", null ],
     [ "orientation", "classObject.html#aa7153f44e3daeeb57539380ba93bde94", null ],
     [ "position", "classObject.html#a32fab64b9880f91079613f3368865601", null ],
     [ "size", "classObject.html#a943828436a63520b4059b749df5564c3", null ],
     [ "velocity", "classObject.html#afc25d3ef0296002e3fa75e5fa64535cd", null ],
-    [ "visage", "classObject.html#a06571203c402e9e130618368860b2207", null ]
+    [ "visage", "classObject.html#adf0d3209835c3fdb6e1be8363e0f6150", null ]
 ];

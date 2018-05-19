@@ -3,19 +3,21 @@
 #include <texturemanager.h>
 #include <shader.h>
 
+using namespace thomas::visage;
+
 void VisageMesh::draw()
 {
   Visage::draw();
 
   GLint uni = 0;
   glActiveTexture(GL_TEXTURE0);
-  if (diffuse && (uni = glGetUniformLocation(engine::Program::active()->handle(), "diffuse")) >= 0)
+  if (diffuse && (uni = glGetUniformLocation(thomas::Program::active()->handle(), "diffuse")) >= 0)
   {
     glBindTexture(GL_TEXTURE_2D, diffuse);
     glUniform1i(uni, 0);
   }
   glActiveTexture(GL_TEXTURE1);
-  if (specular && (uni = glGetUniformLocation(engine::Program::active()->handle(), "specular")) >= 0)
+  if (specular && (uni = glGetUniformLocation(thomas::Program::active()->handle(), "specular")) >= 0)
   {
     glBindTexture(GL_TEXTURE_2D, specular);
     glUniform1i(uni, 1);
@@ -25,7 +27,7 @@ void VisageMesh::draw()
     glBindTexture(GL_TEXTURE_2D, 0);
   }
   glActiveTexture(GL_TEXTURE2);
-  if (emission && (uni = glGetUniformLocation(engine::Program::active()->handle(), "emission")) >= 0)
+  if (emission && (uni = glGetUniformLocation(thomas::Program::active()->handle(), "emission")) >= 0)
   {
     glBindTexture(GL_TEXTURE_2D, emission);
     glUniform1i(uni, 2);
@@ -37,11 +39,11 @@ void VisageMesh::draw()
 
   for (size_t i = 0; i < mesh->getNumMeshes(); ++i)
   {
-    if ((uni = engine::Program::active()->uniform("material.ambient")) >= 0)
+    if ((uni = thomas::Program::active()->uniform("material.ambient")) >= 0)
       glUniform3fv(uni, 1, mesh->getMaterial(i).ambient);
-    if ((uni = engine::Program::active()->uniform("material.diffuse")) >= 0)
+    if ((uni = thomas::Program::active()->uniform("material.diffuse")) >= 0)
       glUniform3fv(uni, 1, mesh->getMaterial(i).diffuse);
-    if ((uni = engine::Program::active()->uniform("material.specular")) >= 0)
+    if ((uni = thomas::Program::active()->uniform("material.specular")) >= 0)
       glUniform3fv(uni, 1, mesh->getMaterial(i).specular);
     glBindVertexArray(mesh->getVAO(i));
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, mesh->getEBO(i));

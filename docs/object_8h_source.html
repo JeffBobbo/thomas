@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>engine: include/engine/object/object.h Source File</title>
+<title>thomas: include/thomas/object/object.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,7 +29,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">engine
+   <div id="projectname">thomas
    </div>
   </td>
  </tr>
@@ -128,7 +128,7 @@ $(document).ready(function(){initNavTree('object_8h_source.html','');});
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keyword">inline</span> millis_t birth()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> born; }</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keyword">inline</span> millis_t age()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> elapsed() - born; }</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">void</span> setVisage(<a class="code" href="classVisage.html">Visage</a>* <span class="keyword">const</span> v) { visage = v; }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">void</span> setVisage(<a class="code" href="classthomas_1_1visage_1_1Visage.html">thomas::visage::Visage</a>* <span class="keyword">const</span> v) { visage = v; }</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="comment">//virtual inline Type type() const =0;</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> idle() {}</div>
@@ -149,7 +149,7 @@ $(document).ready(function(){initNavTree('object_8h_source.html','');});
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  glm::vec3 velocity;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  glm::quat orientation;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keywordtype">float</span> size; <span class="comment">// uniform scaling of the object</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <a class="code" href="classVisage.html">Visage</a>* visage;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <a class="code" href="classthomas_1_1visage_1_1Visage.html">thomas::visage::Visage</a>* visage;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
@@ -159,14 +159,14 @@ $(document).ready(function(){initNavTree('object_8h_source.html','');});
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="classObject_html"><div class="ttname"><a href="classObject.html">Object</a></div><div class="ttdef"><b>Definition:</b> object.h:9</div></div>
-<div class="ttc" id="classVisage_html"><div class="ttname"><a href="classVisage.html">Visage</a></div><div class="ttdef"><b>Definition:</b> visage.h:10</div></div>
+<div class="ttc" id="classthomas_1_1visage_1_1Visage_html"><div class="ttname"><a href="classthomas_1_1visage_1_1Visage.html">thomas::visage::Visage</a></div><div class="ttdef"><b>Definition:</b> visage.h:14</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_a7f531b1c37460085cedd304cb8df01d.html">engine</a></li><li class="navelem"><a class="el" href="dir_05115070899ed1d034b3ab240dad1a43.html">object</a></li><li class="navelem"><b>object.h</b></li>
-    <li class="footer">Generated on Sat May 19 2018 20:05:08 for engine by
+    <li class="navelem"><a class="el" href="dir_47ec12de51ebf9744d7efdd4a8fb1756.html">include</a></li><li class="navelem"><a class="el" href="dir_81d1727124d5a2eda3abe037042a92a0.html">thomas</a></li><li class="navelem"><a class="el" href="dir_c88b21c93edde6325ddebd4009b06092.html">object</a></li><li class="navelem"><b>object.h</b></li>
+    <li class="footer">Generated on Sun May 20 2018 00:05:40 for thomas by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

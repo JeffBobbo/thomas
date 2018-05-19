@@ -5,11 +5,12 @@
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
-#include "../engine.h"
+#include <thomas.h>
+#include <gui/gui.h>
+#include <gui/element.h>
+#include <gui/window.h>
+
 #include "internal.h"
-#include "gui/gui.h"
-#include "gui/element.h"
-#include "gui/window.h"
 
 mouse::MouseState m;
 keyboard::KeyboardState k;
@@ -29,14 +30,14 @@ void mouse::velocity(double& x, double& y)
 
 
 glm::ivec2 lastpos = glm::ivec2(0);
-void testEnterLeave(const glm::ivec2& npos, gui::Element* element)
+void testEnterLeave(const glm::ivec2& npos, thomas::gui::Element* element)
 {
   if (!element)
     return;
-  if (element->type() == gui::Element::Type::WINDOW)
+  if (element->type() == thomas::gui::Element::Type::WINDOW)
   {
-    gui::Window* w = static_cast<gui::Window*>(element);
-    for (gui::Element* child : *w)
+    thomas::gui::Window* w = static_cast<thomas::gui::Window*>(element);
+    for (thomas::gui::Element* child : *w)
       testEnterLeave(npos, child);
   }
   glm::ivec2 p, s;
@@ -74,10 +75,10 @@ void motion(GLFWwindow* window, double x, double y)
   e.mouse.type = Event::MouseType::MOVE;
   e.mouse.position = glm::ivec2(static_cast<int>(x), static_cast<int>(y));
 
-  testEnterLeave(e.mouse.position, gui::root());
+  testEnterLeave(e.mouse.position, thomas::gui::root());
   lastpos = e.mouse.position;
 
-  gui::onEvent(e);
+  thomas::gui::onEvent(e);
 }
 
 void button(GLFWwindow* window, int button, int action, int mods)
@@ -110,7 +111,7 @@ void button(GLFWwindow* window, int button, int action, int mods)
   e.mouse.buttons |= glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_MIDDLE) ? GLFW_MOUSE_BUTTON_MIDDLE : 0;
   e.mouse.buttons |= glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_RIGHT) ? GLFW_MOUSE_BUTTON_RIGHT : 0;
 
-  gui::onEvent(e);
+  thomas::gui::onEvent(e);
 }
 
 void scroll(GLFWwindow* window, double x, double y)
@@ -121,7 +122,7 @@ void scroll(GLFWwindow* window, double x, double y)
   Event e(Event::Type::MOUSE);
   e.mouse.type = Event::MouseType::WHEEL;
   e.mouse.wheel = y;
-  gui::onEvent(e);
+  thomas::gui::onEvent(e);
 }
 
 void mouse::init()
@@ -164,7 +165,7 @@ void kb_action(GLFWwindow* window, int key, int scancode, int action, int mod)
   e.keyboard.alt = mod & GLFW_MOD_ALT;
   e.keyboard.super = mod & GLFW_MOD_SUPER;
 
-  gui::onEvent(e);
+  thomas::gui::onEvent(e);
 }
 void keyboard::init()
 {

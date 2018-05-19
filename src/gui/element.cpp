@@ -1,8 +1,8 @@
 #include <gui/element.h>
 
-#include <engine.h>
+#include <thomas.h>
 
-namespace engine
+namespace thomas
 {
 namespace gui
 {

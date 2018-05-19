@@ -10,11 +10,11 @@
 #include <receiver.h>
 #include <shader.h>
 #include <texturemanager.h>
-#include <engine.h>
+#include <thomas.h>
 
 #include <gui/label.h>
 
-namespace engine
+namespace thomas
 {
 gui::Window* node = nullptr;
 gui::Element* focus = nullptr;
@@ -49,7 +49,7 @@ void gui::draw()
 {
   if (!node)
     return;
-  const engine::Program* program = engine::ProgramManager::get("gui");
+  const thomas::Program* program = thomas::ProgramManager::get("gui");
   program->activate();
 
   glm::mat4 view = glm::mat4(1.0f);

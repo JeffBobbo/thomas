@@ -9,6 +9,8 @@
 #include <shader.h>
 #include <texturemanager.h>
 
+using namespace thomas::visage;
+
 VisageSkybox::~VisageSkybox()
 {
   if (textures[0])

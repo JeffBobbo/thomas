@@ -8,7 +8,7 @@ void updateTicks();
 
 extern EventReceiver* receiver;
 
-namespace engine
+namespace thomas
 {
 namespace gui
 {

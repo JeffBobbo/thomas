@@ -1,6 +1,6 @@
 #include <object/object.h>
 
-#include <engine.h>
+#include <thomas.h>
 
 void Object::move()
 {

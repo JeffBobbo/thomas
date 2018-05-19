@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['visage',['Visage',['../classVisage.html',1,'']]],
-  ['visagecomplex',['VisageComplex',['../classVisageComplex.html',1,'']]],
-  ['visagemesh',['VisageMesh',['../classVisageMesh.html',1,'']]],
-  ['visageskybox',['VisageSkybox',['../classVisageSkybox.html',1,'']]]
+  ['visage',['Visage',['../classthomas_1_1visage_1_1Visage.html',1,'thomas::visage']]],
+  ['visagecomplex',['VisageComplex',['../classthomas_1_1visage_1_1VisageComplex.html',1,'thomas::visage']]],
+  ['visagemesh',['VisageMesh',['../classthomas_1_1visage_1_1VisageMesh.html',1,'thomas::visage']]],
+  ['visageskybox',['VisageSkybox',['../classthomas_1_1visage_1_1VisageSkybox.html',1,'thomas::visage']]]
 ];

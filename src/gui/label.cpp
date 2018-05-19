@@ -4,7 +4,7 @@
 
 #include "../../external/gltext.h"
 
-namespace engine
+namespace thomas
 {
 namespace gui
 {

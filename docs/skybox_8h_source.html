@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>engine: include/engine/visage/skybox.h Source File</title>
+<title>thomas: include/thomas/visage/skybox.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,7 +29,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">engine
+   <div id="projectname">thomas
    </div>
   </td>
  </tr>
@@ -112,35 +112,41 @@ $(document).ready(function(){initNavTree('skybox_8h_source.html','');});
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;visage.h&quot;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classVisageSkybox.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="classVisageSkybox.html">VisageSkybox</a> : <span class="keyword">public</span> <a class="code" href="classVisage.html">Visage</a></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span>thomas</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <a class="code" href="classVisageSkybox.html">VisageSkybox</a>() : textures{0}, skybox_vao(0), skybox_vbo(0) {}</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <span class="keyword">virtual</span> ~<a class="code" href="classVisageSkybox.html">VisageSkybox</a>();</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <span class="keyword">virtual</span> <span class="keyword">inline</span> Type type()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> Type::SKYBOX; }</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> draw();</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">namespace </span>visage</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classthomas_1_1visage_1_1VisageSkybox.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="classthomas_1_1visage_1_1VisageSkybox.html">VisageSkybox</a> : <span class="keyword">public</span> <a class="code" href="classthomas_1_1visage_1_1Visage.html">Visage</a></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <a class="code" href="classthomas_1_1visage_1_1VisageSkybox.html">VisageSkybox</a>() : textures{0}, skybox_vao(0), skybox_vbo(0) {}</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <span class="keyword">virtual</span> ~<a class="code" href="classthomas_1_1visage_1_1VisageSkybox.html">VisageSkybox</a>();</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keywordtype">void</span> load(<span class="keyword">const</span> std::string&amp; name);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keyword">virtual</span> <span class="keyword">inline</span> Type type()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> Type::SKYBOX; }</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  GLuint textures[6];</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  GLuint skybox_vao;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  GLuint skybox_vbo;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  GLuint skybox_ebo;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;};</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="classVisageSkybox_html"><div class="ttname"><a href="classVisageSkybox.html">VisageSkybox</a></div><div class="ttdef"><b>Definition:</b> skybox.h:10</div></div>
-<div class="ttc" id="classVisage_html"><div class="ttname"><a href="classVisage.html">Visage</a></div><div class="ttdef"><b>Definition:</b> visage.h:10</div></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> draw();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keywordtype">void</span> load(<span class="keyword">const</span> std::string&amp; name);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  GLuint textures[6];</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  GLuint skybox_vao;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  GLuint skybox_vbo;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  GLuint skybox_ebo;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;};</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="classthomas_1_1visage_1_1Visage_html"><div class="ttname"><a href="classthomas_1_1visage_1_1Visage.html">thomas::visage::Visage</a></div><div class="ttdef"><b>Definition:</b> visage.h:14</div></div>
+<div class="ttc" id="classthomas_1_1visage_1_1VisageSkybox_html"><div class="ttname"><a href="classthomas_1_1visage_1_1VisageSkybox.html">thomas::visage::VisageSkybox</a></div><div class="ttdef"><b>Definition:</b> skybox.h:14</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_a7f531b1c37460085cedd304cb8df01d.html">engine</a></li><li class="navelem"><a class="el" href="dir_f6b1866bb95ef2e210edb41a372182f7.html">visage</a></li><li class="navelem"><b>skybox.h</b></li>
-    <li class="footer">Generated on Sat May 19 2018 20:05:08 for engine by
+    <li class="navelem"><a class="el" href="dir_47ec12de51ebf9744d7efdd4a8fb1756.html">include</a></li><li class="navelem"><a class="el" href="dir_81d1727124d5a2eda3abe037042a92a0.html">thomas</a></li><li class="navelem"><a class="el" href="dir_6731a366b67c528847abf6ae5af0e125.html">visage</a></li><li class="navelem"><b>skybox.h</b></li>
+    <li class="footer">Generated on Sun May 20 2018 00:05:40 for thomas by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['getduration',['getDuration',['../classinterval__t.html#a8581a0d5a910f68ea91f02fff1226dd0',1,'interval_t']]],
-  ['getelapsedtime',['getElapsedTime',['../classengine_1_1util_1_1stopwatch__t.html#ad9a7c7dfb299eb154974516615cecf39',1,'engine::util::stopwatch_t']]],
-  ['gettime',['getTime',['../classengine_1_1util_1_1stopwatch__t.html#a347b7ba9ab2381dc5871384c915bd3ec',1,'engine::util::stopwatch_t']]]
+  ['getduration',['getDuration',['../classthomas_1_1util_1_1interval__t.html#a82d49dd5ae059d6c6d9ba46aaf493be5',1,'thomas::util::interval_t']]],
+  ['getelapsedtime',['getElapsedTime',['../classthomas_1_1util_1_1stopwatch__t.html#a824902756a224c7a768d023969e19e4f',1,'thomas::util::stopwatch_t']]],
+  ['gettime',['getTime',['../classthomas_1_1util_1_1stopwatch__t.html#a4ea85ba36182c76bbc14175c76e423a1',1,'thomas::util::stopwatch_t']]]
 ];

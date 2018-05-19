@@ -1,4 +1,4 @@
-#include "shader.h"
+#include <shader.h>
 
 #include <fstream>
 #include <sstream>
@@ -6,8 +6,8 @@
 #include <glm/glm.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
-#include "../engine.h"
-#include "object/camera.h"
+#include <thomas.h>
+#include <object/camera.h>
 
 std::string readFile(const std::string& filename)
 {
@@ -16,7 +16,7 @@ std::string readFile(const std::string& filename)
   return std::string(std::istreambuf_iterator<char>(in), std::istreambuf_iterator<char>());
 }
 
-namespace engine
+namespace thomas
 {
 Program* active;
 

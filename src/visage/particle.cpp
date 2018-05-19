@@ -4,12 +4,14 @@
 #include <glm/gtc/type_ptr.hpp>
 #include <glm/gtx/random.hpp>
 
-#include <engine.h>
+#include <thomas.h>
 #include <shader.h>
 #include <texturemanager.h>
 #include <object/camera.h>
 #include <util/random.h>
 #include <util/util.h>
+
+using namespace thomas::visage;
 
 ParticleSystem::ParticleSystem()
   : max(1)
@@ -65,7 +67,7 @@ void ParticleSystem::add(int n)
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, quad_ebo);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(elements), elements, GL_STATIC_DRAW);
 
-    const engine::Program* program = engine::ProgramManager::get("particle");
+    const thomas::Program* program = thomas::ProgramManager::get("particle");
     GLint posAttrib = glGetAttribLocation(program->handle(), "in_vertex");
     glEnableVertexAttribArray(posAttrib);
     glVertexAttribPointer(posAttrib, 3, GL_FLOAT, GL_FALSE, 5*sizeof(float), 0);
@@ -141,7 +143,7 @@ void ParticleSystem::draw()
 
   glBindVertexArray(quad_vao);
 
-  const engine::Program* program = engine::ProgramManager::get("particle");
+  const thomas::Program* program = thomas::ProgramManager::get("particle");
   program->activate();
   program->update();
   glActiveTexture(GL_TEXTURE0);
