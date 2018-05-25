@@ -6,6 +6,8 @@
 
 #include <GL/glew.h>
 
+namespace thomas
+{
 class Texture final
 {
 public:
@@ -43,5 +45,6 @@ public:
 private:
   std::map<std::string, Texture* > textures;
 };
+}
 
 #endif

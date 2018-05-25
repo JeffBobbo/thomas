@@ -2,12 +2,12 @@
 
 #include <thomas.h>
 
-void Object::move()
+void thomas::object::Object::move()
 {
   position += velocity * static_cast<float>(delta());
 }
 
-void Object::draw()
+void thomas::object::Object::draw()
 {
   if (visage)
     visage->draw();

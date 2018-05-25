@@ -109,13 +109,13 @@ $(document).ready(function(){initNavTree('element_8h_source.html','');});
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;glm/glm.hpp&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;../receiver.h&quot;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">class </span><a class="code" href="classEvent.html">Event</a>;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">class </span>Event;</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span>thomas</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span>gui</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classthomas_1_1gui_1_1Element.html">   13</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classthomas_1_1gui_1_1Element.html">Element</a> : <span class="keyword">public</span> <a class="code" href="classEventReceiver.html">EventReceiver</a></div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classthomas_1_1gui_1_1Element.html">   13</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classthomas_1_1gui_1_1Element.html">Element</a> : <span class="keyword">public</span> <a class="code" href="classthomas_1_1EventReceiver.html">EventReceiver</a></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  {</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">enum class</span> Type</div>
@@ -136,7 +136,7 @@ $(document).ready(function(){initNavTree('element_8h_source.html','');});
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span> getRect(glm::ivec2&amp; pos, glm::ivec2&amp; size) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> onEvent(<span class="keyword">const</span> <a class="code" href="classEvent.html">Event</a>&amp;) { <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> onEvent(<span class="keyword">const</span> <a class="code" href="classthomas_1_1Event.html">Event</a>&amp;) { <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    glm::ivec4 position;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    glm::vec4 relative;</div>
@@ -147,16 +147,16 @@ $(document).ready(function(){initNavTree('element_8h_source.html','');});
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="classEventReceiver_html"><div class="ttname"><a href="classEventReceiver.html">EventReceiver</a></div><div class="ttdef"><b>Definition:</b> receiver.h:6</div></div>
+<div class="ttc" id="classthomas_1_1EventReceiver_html"><div class="ttname"><a href="classthomas_1_1EventReceiver.html">thomas::EventReceiver</a></div><div class="ttdef"><b>Definition:</b> receiver.h:8</div></div>
+<div class="ttc" id="classthomas_1_1Event_html"><div class="ttname"><a href="classthomas_1_1Event.html">thomas::Event</a></div><div class="ttdef"><b>Definition:</b> event.h:12</div></div>
 <div class="ttc" id="classthomas_1_1gui_1_1Element_html"><div class="ttname"><a href="classthomas_1_1gui_1_1Element.html">thomas::gui::Element</a></div><div class="ttdef"><b>Definition:</b> element.h:13</div></div>
-<div class="ttc" id="classEvent_html"><div class="ttname"><a href="classEvent.html">Event</a></div><div class="ttdef"><b>Definition:</b> event.h:10</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_47ec12de51ebf9744d7efdd4a8fb1756.html">include</a></li><li class="navelem"><a class="el" href="dir_81d1727124d5a2eda3abe037042a92a0.html">thomas</a></li><li class="navelem"><a class="el" href="dir_46bda60559ae32c437aa18d88060964b.html">gui</a></li><li class="navelem"><b>element.h</b></li>
-    <li class="footer">Generated on Sun May 20 2018 00:05:40 for thomas by
+    <li class="footer">Generated on Fri May 25 2018 15:56:15 for thomas by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -5,6 +5,10 @@
 
 #include "util/util.h"
 
+namespace thomas
+{
+namespace input
+{
 namespace mouse
 {
   struct Wheel
@@ -71,5 +75,7 @@ namespace input
   void runEvents();
 }
 */
+}
+}
 
 #endif

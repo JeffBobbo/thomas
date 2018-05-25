@@ -6,6 +6,10 @@
 #include "../util/util.h"
 #include "../visage/visage.h"
 
+namespace thomas
+{
+namespace object
+{
 class Object
 {
 public:
@@ -49,7 +53,8 @@ protected:
 private:
 
   const millis_t born;
-
 };
+}
+}
 
 #endif

@@ -9,6 +9,10 @@
 #include "../util/angle.h"
 #include "../util/random.h"
 
+namespace thomas
+{
+namespace object
+{
 class Camera
 {
 public:
@@ -84,5 +88,7 @@ private:
 };
 
 extern Camera* camera;
+}
+}
 
 #endif

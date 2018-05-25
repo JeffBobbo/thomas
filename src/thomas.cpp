@@ -8,7 +8,7 @@
 int screenWidth;
 int screenHeight;
 GLFWwindow* window = nullptr;
-EventReceiver* receiver = nullptr;
+thomas::EventReceiver* receiver = nullptr;
 
 void resize(GLFWwindow* window, int width, int height)
 {

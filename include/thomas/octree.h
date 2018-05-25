@@ -5,6 +5,10 @@
 
 const size_t MAX_LEVELS = 5;
 
+namespace thomas
+{
+namespace experimental
+{
 class OctreeNode final
 {
 public:
@@ -65,7 +69,7 @@ private:
 
 class Octree final
 {
-public: 
+public:
   Octree();
   ~Octree()
   {
@@ -81,5 +85,7 @@ public:
 private:
   OctreeNode* root;
 };
+}
+}
 
 #endif

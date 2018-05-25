@@ -9,6 +9,10 @@
 
 #include "../external/stb_truetype."
 
+namespace thomas
+{
+namespace experimental
+{
 class Font final
 {
 public:
@@ -50,5 +54,7 @@ public:
 private:
   std::map<std::pair<std::string, float>, Font* > fonts;
 };
+}
+}
 
 #endif

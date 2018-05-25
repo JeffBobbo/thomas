@@ -7,6 +7,8 @@
 
 #include "gui/element.h"
 
+namespace thomas
+{
 class Event
 {
 public:
@@ -83,5 +85,6 @@ public:
     KeyInput keyboard;
   };
 };
+}
 
 #endif

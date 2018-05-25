@@ -12,6 +12,9 @@
 
 #include "internal.h"
 
+using namespace thomas;
+using namespace thomas::input;
+
 mouse::MouseState m;
 keyboard::KeyboardState k;
 
@@ -52,8 +55,8 @@ void testEnterLeave(const glm::ivec2& npos, thomas::gui::Element* element)
 
   if (lastIn != nowIn)
   {
-    Event e(Event::Type::GUI);
-    e.gui.type = (nowIn) ? Event::GUIType::ELEMENT_ENTER : Event::GUIType::ELEMENT_LEAVE;
+    thomas::Event e(thomas::Event::Type::GUI);
+    e.gui.type = (nowIn) ? thomas::Event::GUIType::ELEMENT_ENTER : thomas::Event::GUIType::ELEMENT_LEAVE;
     e.gui.element = element;
     e.gui.caller = nullptr;
     element->onEvent(e);
@@ -71,8 +74,8 @@ void motion(GLFWwindow* window, double x, double y)
   if (!receiver)
     return;
 
-  Event e(Event::Type::MOUSE);
-  e.mouse.type = Event::MouseType::MOVE;
+  thomas::Event e(thomas::Event::Type::MOUSE);
+  e.mouse.type = thomas::Event::MouseType::MOVE;
   e.mouse.position = glm::ivec2(static_cast<int>(x), static_cast<int>(y));
 
   testEnterLeave(e.mouse.position, thomas::gui::root());
@@ -93,18 +96,18 @@ void button(GLFWwindow* window, int button, int action, int mods)
   if (!receiver)
     return;
 
-  Event e(Event::Type::MOUSE);
+  thomas::Event e(thomas::Event::Type::MOUSE);
   e.mouse.buttons = 0;
   switch (button)
   {
     case GLFW_MOUSE_BUTTON_LEFT:
-      e.mouse.type = action == GLFW_PRESS ? Event::MouseType::LEFT_DOWN : Event::MouseType::LEFT_UP;
+      e.mouse.type = action == GLFW_PRESS ? thomas::Event::MouseType::LEFT_DOWN : thomas::Event::MouseType::LEFT_UP;
     break;
     case GLFW_MOUSE_BUTTON_MIDDLE:
-      e.mouse.type = action == GLFW_PRESS ? Event::MouseType::MIDDLE_DOWN : Event::MouseType::MIDDLE_UP;
+      e.mouse.type = action == GLFW_PRESS ? thomas::Event::MouseType::MIDDLE_DOWN : thomas::Event::MouseType::MIDDLE_UP;
     break;
     case GLFW_MOUSE_BUTTON_RIGHT:
-      e.mouse.type = action == GLFW_PRESS ? Event::MouseType::RIGHT_DOWN : Event::MouseType::RIGHT_UP;
+      e.mouse.type = action == GLFW_PRESS ? thomas::Event::MouseType::RIGHT_DOWN : thomas::Event::MouseType::RIGHT_UP;
     break;
   }
   e.mouse.buttons |= glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_LEFT) ? GLFW_MOUSE_BUTTON_LEFT : 0;
@@ -119,8 +122,8 @@ void scroll(GLFWwindow* window, double x, double y)
   m.wheel.x = x;
   m.wheel.y = y;
 
-  Event e(Event::Type::MOUSE);
-  e.mouse.type = Event::MouseType::WHEEL;
+  thomas::Event e(thomas::Event::Type::MOUSE);
+  e.mouse.type = thomas::Event::MouseType::WHEEL;
   e.mouse.wheel = y;
   thomas::gui::onEvent(e);
 }
@@ -155,7 +158,7 @@ void kb_action(GLFWwindow* window, int key, int scancode, int action, int mod)
   if (!receiver)
     return;
 
-  Event e(Event::Type::KEYBOARD);
+  thomas::Event e(thomas::Event::Type::KEYBOARD);
   e.keyboard.character = key;
   e.keyboard.keycode = scancode;
   e.keyboard.pressed = action == GLFW_PRESS;

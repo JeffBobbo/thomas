@@ -111,62 +111,67 @@ $(document).ready(function(){initNavTree('object_8h_source.html','');});
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;../util/util.h&quot;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;../visage/visage.h&quot;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classObject.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="classObject.html">Object</a></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span>thomas</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <span class="keyword">enum class</span> Type</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  {</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  };</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <a class="code" href="classObject.html">Object</a>()</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;   : position(0.0f), velocity(0.0f), orientation()</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;   , size(1.0f)</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;   , visage(<span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;   , born(elapsed()) {};</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="keyword">virtual</span> ~<a class="code" href="classObject.html">Object</a>() {};</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keyword">inline</span> millis_t birth()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> born; }</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keyword">inline</span> millis_t age()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> elapsed() - born; }</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">void</span> setVisage(<a class="code" href="classthomas_1_1visage_1_1Visage.html">thomas::visage::Visage</a>* <span class="keyword">const</span> v) { visage = v; }</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="comment">//virtual inline Type type() const =0;</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> idle() {}</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> move();</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> draw();</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span>object</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classthomas_1_1object_1_1Object.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="classthomas_1_1object_1_1Object.html">Object</a></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <span class="keyword">enum class</span> Type</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  };</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <a class="code" href="classthomas_1_1object_1_1Object.html">Object</a>()</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;   : position(0.0f), velocity(0.0f), orientation()</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;   , size(1.0f)</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;   , visage(<span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;   , born(elapsed()) {};</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keyword">virtual</span> ~<a class="code" href="classthomas_1_1object_1_1Object.html">Object</a>() {};</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keyword">inline</span> millis_t birth()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> born; }</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keyword">inline</span> millis_t age()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> elapsed() - born; }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">void</span> setVisage(<a class="code" href="classthomas_1_1visage_1_1Visage.html">thomas::visage::Visage</a>* <span class="keyword">const</span> v) { visage = v; }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="comment">//virtual inline Type type() const =0;</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keyword">virtual</span> <span class="keyword">inline</span> <span class="keywordtype">float</span> distance(<span class="keyword">const</span> <a class="code" href="classObject.html">Object</a>* <span class="keyword">const</span> obj) <span class="keyword">const</span> <span class="keyword">final</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">return</span> glm::distance(position, obj-&gt;position);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  }</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keyword">inline</span> <span class="keyword">const</span> glm::vec3&amp; getPosition()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> position; }</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keyword">inline</span> <span class="keyword">const</span> glm::vec3&amp; getVelocity()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> velocity; }</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keyword">inline</span> <span class="keyword">const</span> glm::quat&amp; getOrientation()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> orientation; }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> idle() {}</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> move();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> draw();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keyword">virtual</span> <span class="keyword">inline</span> <span class="keywordtype">float</span> distance(<span class="keyword">const</span> <a class="code" href="classthomas_1_1object_1_1Object.html">Object</a>* <span class="keyword">const</span> obj) <span class="keyword">const</span> <span class="keyword">final</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">return</span> glm::distance(position, obj-&gt;position);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  }</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  glm::vec3 position;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  glm::vec3 velocity;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  glm::quat orientation;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keywordtype">float</span> size; <span class="comment">// uniform scaling of the object</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <a class="code" href="classthomas_1_1visage_1_1Visage.html">thomas::visage::Visage</a>* visage;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keyword">const</span> millis_t born;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;};</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keyword">inline</span> <span class="keyword">const</span> glm::vec3&amp; getPosition()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> position; }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keyword">inline</span> <span class="keyword">const</span> glm::vec3&amp; getVelocity()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> velocity; }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keyword">inline</span> <span class="keyword">const</span> glm::quat&amp; getOrientation()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> orientation; }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  glm::vec3 position;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  glm::vec3 velocity;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  glm::quat orientation;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keywordtype">float</span> size; <span class="comment">// uniform scaling of the object</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <a class="code" href="classthomas_1_1visage_1_1Visage.html">thomas::visage::Visage</a>* visage;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="classObject_html"><div class="ttname"><a href="classObject.html">Object</a></div><div class="ttdef"><b>Definition:</b> object.h:9</div></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keyword">const</span> millis_t born;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;};</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="classthomas_1_1visage_1_1Visage_html"><div class="ttname"><a href="classthomas_1_1visage_1_1Visage.html">thomas::visage::Visage</a></div><div class="ttdef"><b>Definition:</b> visage.h:14</div></div>
+<div class="ttc" id="classthomas_1_1object_1_1Object_html"><div class="ttname"><a href="classthomas_1_1object_1_1Object.html">thomas::object::Object</a></div><div class="ttdef"><b>Definition:</b> object.h:13</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_47ec12de51ebf9744d7efdd4a8fb1756.html">include</a></li><li class="navelem"><a class="el" href="dir_81d1727124d5a2eda3abe037042a92a0.html">thomas</a></li><li class="navelem"><a class="el" href="dir_c88b21c93edde6325ddebd4009b06092.html">object</a></li><li class="navelem"><b>object.h</b></li>
-    <li class="footer">Generated on Sun May 20 2018 00:05:40 for thomas by
+    <li class="footer">Generated on Fri May 25 2018 15:56:15 for thomas by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

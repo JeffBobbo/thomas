@@ -3,6 +3,7 @@
 #define STB_IMAGE_IMPLEMENTATION
 #include "../external/stb_image.h"
 
+using namespace thomas;
 Texture::Texture(const std::string& name)
 {
   int width, height, bpp;

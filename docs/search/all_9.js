@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['keyboardstate',['KeyboardState',['../structkeyboard_1_1KeyboardState.html',1,'keyboard']]],
-  ['keyinput',['KeyInput',['../structEvent_1_1KeyInput.html',1,'Event']]],
-  ['keystate',['KeyState',['../structkeyboard_1_1KeyState.html',1,'keyboard']]]
+  ['keyboardstate',['KeyboardState',['../structthomas_1_1input_1_1keyboard_1_1KeyboardState.html',1,'thomas::input::keyboard']]],
+  ['keyinput',['KeyInput',['../structthomas_1_1Event_1_1KeyInput.html',1,'thomas::Event']]],
+  ['keystate',['KeyState',['../structthomas_1_1input_1_1keyboard_1_1KeyState.html',1,'thomas::input::keyboard']]]
 ];

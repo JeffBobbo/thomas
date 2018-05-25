@@ -6,7 +6,7 @@
 void initTicks();
 void updateTicks();
 
-extern EventReceiver* receiver;
+extern thomas::EventReceiver* receiver;
 
 namespace thomas
 {
