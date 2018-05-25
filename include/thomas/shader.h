@@ -8,6 +8,10 @@
 
 namespace thomas
 {
+namespace object
+{
+class Camera;
+}
 class Shader final
 {
 public:
@@ -74,7 +78,7 @@ public:
     current = const_cast<Program* >(this);
   }
 
-  void update() const;
+  void update(const thomas::object::Camera* const camera) const;
 
 private:
   friend Shader;

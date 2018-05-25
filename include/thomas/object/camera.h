@@ -59,15 +59,15 @@ public:
     return glm::perspective(fov, width/height, near, far);
   }
 
-  inline glm::vec3 lookingFrom()
+  inline glm::vec3 lookingFrom() const
   {
     return sourceObject ? sourceObject->getPosition() : sourcePosition;
   }
-  inline glm::vec3 lookingAt()
+  inline glm::vec3 lookingAt() const
   {
     return targetObject ? targetObject->getPosition() : targetPosition;
   }
-  glm::mat4 getView();
+  glm::mat4 getView() const;
 
   inline const glm::vec3& getPosition() const
   {
@@ -86,8 +86,6 @@ private:
   float near, far;
   float fov;
 };
-
-extern Camera* camera;
 }
 }
 
