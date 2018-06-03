@@ -54,7 +54,7 @@ public:
     double roll = random(0.0, weight()) - it->first;
     while (roll >= 0.0 && it != std::end(entries))
     {
-      ++it
+      ++it;
       roll -= it->first;
     }
     return it->second;
