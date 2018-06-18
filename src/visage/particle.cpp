@@ -145,7 +145,7 @@ void ParticleSystem::draw()
 
   const thomas::Program* program = thomas::ProgramManager::get("particle");
   program->activate();
-  program->update();
+  //program->update();
   glActiveTexture(GL_TEXTURE0);
   glUniform1i(glGetUniformLocation(program->handle(), "diffuse"), 0);
   glBindTexture(GL_TEXTURE_2D, texture);
